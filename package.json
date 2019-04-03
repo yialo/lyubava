@@ -3,6 +3,9 @@
   "browserslist": [
     "last 2 versions"
   ],
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
   "description": "Lyubava site development",
   "devDependencies": {
     "autoprefixer": "9.5.0",
