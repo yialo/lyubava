@@ -3424,3 +3424,49 @@ h6 {
 button {
   display: block;
   cursor: pointer; }
+
+.s-picture__image {
+  width: 100%;
+  height: 100%; }
+
+.s-visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].s-visually-hidden,
+input[type="radio"].s-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%); }
+
+.body-header__container {
+  background-image: url("../img/body-header_Background-2.svg"), url("../img/body-header_Background-1.svg");
+  background-position-x: 0, 0;
+  background-position-y: bottom, 0;
+  background-size: 1920px auto, 266px auto;
+  background-repeat: no-repeat, no-repeat;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: green;
+  outline-offset: -1px; }
+
+.body-header__nest--logo {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+.logo__picture {
+  width: 196px;
+  height: 52px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  @media (min-width: 992px) {
+    .logo__picture {
+      width: 264px;
+      height: 71px; } }

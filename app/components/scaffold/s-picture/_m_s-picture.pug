@@ -1,0 +1,36 @@
+mixin s-picture(sPicture_props)
+  -
+    const { class: classNames } = attributes;
+    const getPictureData = function (props) {
+      const { path, ext, mediaSet } = props;
+      const _BREAKPOINTS = { lg: '(min-width: 992px)' };
+      const lastIndex = mediaSet.length - 1;
+      let finalSet = { srcset: '', sizes: '' };
+
+      finalSet.src = `img/${path}@${mediaSet[lastIndex]}.${ext}`;
+
+      for (let i = 0; i <= lastIndex; i += 1) {
+        if (i < lastIndex) {
+          const [mq, width] = mediaSet[i];
+          const srcToAdd = `img/${path}@${width}.${ext} ${width}w, `;
+          const sizeToAdd = `${_BREAKPOINTS[mq]} ${width}px, `;
+          finalSet.srcset += srcToAdd;
+          finalSet.sizes += sizeToAdd;
+        } else {
+          const srcToAdd = `img/${path}@${mediaSet[i]}.${ext} ${mediaSet[i]}w`;
+          finalSet.srcset += srcToAdd;
+          finalSet.sizes += `${mediaSet[i]}px`;
+        }
+      }
+
+      return finalSet;
+    };
+
+  picture.s-picture(class=classNames)
+    - const { srcset, sizes, src } = getPictureData(sPicture_props);
+    img.s-picture__image(
+      srcset=srcset,
+      sizes=sizes,
+      src=src,
+      alt=sPicture_props.alt,
+    )

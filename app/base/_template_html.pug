@@ -3,7 +3,7 @@ include ../global/data/_d_pages.pug
 
 block page-id
 
-- const $pageTitle = $PAGES[pageId];
+- const [$pageTitle, $pageHeading] = $PAGES[$pageId];
 
 include _import_functions.pug
 include _import_mixins.pug
@@ -11,12 +11,12 @@ include _import_mixins.pug
 doctype html
 html(class='page', lang='ru')
   include ../global/head/_head.pug
-  body(class=setModifiers('body', [pageId]))
+  body(class=setModifiers('body', [$pageId]))
     .body__container
       header.body__header
         include ../components/capital/body-header/_body-header.pug
       main.body__main
-        div(class=[setModifiers('body-main', [pageId])])
+        div(class=[setModifiers('body-main', [$pageId])])
           block body-main__Content
       footer.body__footer
         include ../components/capital/body-footer/_body-footer.pug

@@ -1,0 +1,36 @@
+.body-header__container {
+  $_body-header-background-partial-props: (
+    (number: 2, y: bottom, width: 1920px,),
+    (number: 1, y: 0, width: 266px,),
+  );
+
+  @function set-body-header-background($variable-props) {
+    $output-list: ();
+    $length: length($variable-props);
+
+    @for $i from 1 through $length {
+      $variable-props-item: nth($variable-props, $i);
+      $number: map-get($variable-props-item, number);
+      $y: map-get($variable-props-item, y);
+      $width: map-get($variable-props-item, width);
+
+      $output-item: (
+        image: "url(\"../img/body-header_Background-#{$number}.svg\")",
+        position-x: "0",
+        position-y: #{$y},
+        size: "#{$width} auto",
+        repeat: "no-repeat",
+      );
+
+      $output-list: append($output-list, $output-item);
+    }
+
+    @return $output-list;
+  }
+
+  $_body-header-background-full-props: set-body-header-background($_body-header-background-partial-props);
+
+  @include set-multiple-background($_body-header-background-full-props);
+  @include padding-hor(20px);
+  @include outline();
+}
