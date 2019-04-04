@@ -1,4 +1,4 @@
-@import "../vendors/normalize.scss";
+@import "~normalize.css";
 @import "~bootstrap/scss/bootstrap-grid.scss";
 @import "../vendors_customized/*.scss";
 
@@ -18,5 +18,7 @@
   "../components/scaffold/s-visually-hidden/*.scss";
 
 @import
+  "../components/capital/body-footer/*.scss",
   "../components/capital/body-header/*.scss",
+  "../components/capital/body/*.scss",
   "../components/capital/logo/*.scss";
