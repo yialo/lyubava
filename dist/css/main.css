@@ -3366,7 +3366,6 @@ html {
 
 /* Breakpoints */
 /* Colors */
-/* Root custom properties */
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -3381,6 +3380,7 @@ html {
   font-display: swap;
   src: url("../fonts/roboto-700-normal.woff2") format("woff2"), url("../fonts/roboto-700-normal.woff") format("woff"); }
 
+/* Root custom properties */
 /* Animations */
 html {
   -webkit-box-sizing: border-box;
