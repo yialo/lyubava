@@ -19,7 +19,7 @@ const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
-const sassglob = require('gulp-sass-glob');
+const sassmagicimport = require('node-sass-magic-importer');
 const server = require('browser-sync').create();
 const validator = require('gulp-w3c-html-validator');
 const zopfli = require('imagemin-zopfli');
@@ -216,6 +216,7 @@ const copybitmaps = function copyBitmapImagesToBuildFolder() {
 const scripts = function launchJsCompiler() {
   return gulp
     .src(jsSrc)
+    .pipe(plumber())
     .pipe(minjs())
     .pipe(gulp.dest('./dist/js/'));
 };
@@ -224,8 +225,7 @@ const style = function launchCssCompiler() {
   return gulp
     .src(cssSrc)
     .pipe(plumber())
-    .pipe(sassglob())
-    .pipe(sass())
+    .pipe(sass({ importer: sassmagicimport() }))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(mincss())

@@ -3457,9 +3457,15 @@ input[type="radio"].s-visually-hidden {
   outline-color: green;
   outline-offset: -1px; }
 
-.body-header__nest--logo {
-  margin-top: 10px;
-  margin-bottom: 20px; }
+.body-header__nest {
+  color: green; }
+  .body-header__nest--logo {
+    margin-top: 10px;
+    margin-bottom: 20px; }
+
+.logo__link {
+  display: block;
+  color: white; }
 
 .logo__picture {
   width: 196px;
@@ -3470,3 +3476,6 @@ input[type="radio"].s-visually-hidden {
     .logo__picture {
       width: 264px;
       height: 71px; } }
+
+.logo {
+  color: red; }
