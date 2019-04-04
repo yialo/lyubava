@@ -1,0 +1,10 @@
+-
+  const getCatalogList = function getCustomCatalogList(orderList) {
+    const catalogList = [];
+    for (let i = 0; i < $CATALOG_ITEMS.length; i += 1) {
+      const index = orderList[i] - 1;
+      catalogList.push($CATALOG_ITEMS[index]);
+    }
+
+    return catalogList;
+  };

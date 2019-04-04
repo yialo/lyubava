@@ -12,8 +12,7 @@ mixin logo(logoLocation)
         return LOGO_IMAGES_DATA;
       };
     .logo__container
-      // test
-      a.logo__link(href='#')
+      a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
         +s-picture(getLogoProps(logoLocation)).logo__picture
         if $pageId === 'index'
           h1.s-visually-hidden.logo__headline= $pageHeading

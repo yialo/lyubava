@@ -1,6 +1,12 @@
 .body-header
   .container.body-header__container
     .row.no-gutters.body-header__row
-      .col-9.body-header__nest.body-header__nest--logo
+      .col-9(class=setModifiers('body-header__nest', ['logo']))
         +logo('header')
-      .col-3.body-header__nest.body-header__nest--navigation-control
+      .col-3(class=setModifiers('body-header__nest', ['navigation-control']))
+        .navigation-control
+      .col-lg-9(class=setModifiers('body-header__nest', ['navigation']))
+        div(class=setModifiers('navigation', ['narrow-popup', 'wide-line']))
+          .row.no-gutters.navigation__container
+            nav.col-lg-4(class=setModifiers('navigation__nest', ['header-menu']))
+              include ../header-menu/_header-menu.pug
