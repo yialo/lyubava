@@ -1,1 +1,9 @@
-@import "../components/scaffold/s-visually-hidden/**/*.scss";
+.s-visually-hidden {
+  @at-root {
+    &:not(:focus):not(:active),
+    input[type="checkbox"]#{&},
+    input[type="radio"]#{&} {
+      @include visually-hiding();
+    }
+  }
+}

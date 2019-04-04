@@ -14,12 +14,9 @@
   "../global/styles/tags.scss";
 
 @import
-  "../components/scaffold/s-picture/*.scss",
-  "../components/scaffold/s-visually-hidden/*.scss";
+  "../components/scaffold/s-picture/s-picture.scss",
+  "../components/scaffold/s-visually-hidden/s-visually-hidden.scss";
 
 @import
-  "../components/capital/body-footer/*.scss",
-  "../components/capital/body-header/*.scss",
-  "../components/capital/body/*.scss",
-  "../components/capital/header-menu/*.scss",
-  "../components/capital/logo/*.scss";
+  "../components/capital/body-header/_body-header.scss",
+  "../components/capital/logo/_logo.scss";
