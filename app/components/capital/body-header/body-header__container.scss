@@ -1,4 +1,4 @@
-.body-header__container {
+#{$this}__container {
   $_body-header-background-partial-props: (
     (number: 2, y: bottom, width: 1920px,),
     (number: 1, y: 0, width: 266px,),

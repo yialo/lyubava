@@ -6,7 +6,7 @@
       {
         "except": ["first-nested"],
         "ignore": ["after-comment"],
-        "ignoreAtRules": ["else", "import"]
+        "ignoreAtRules": ["else", "import", "include"]
       }
     ],
     "at-rule-name-case": "lower",
