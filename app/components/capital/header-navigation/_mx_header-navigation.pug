@@ -2,10 +2,12 @@ mixin header-navigation()
   .header-navigation
     .header-navigation__list
       -
-        const _HEADER_NAVIGATION_LIST = getNavigationList(
-          [1, 2, 3, 4],
-          'header'
-        );
+        const _HEADER_NAVIGATION_LIST = [
+          ['catalog', 'Каталог'],
+          ['shops', 'Магазины'],
+          ['contacts', 'Контакты'],
+          ['about', 'О нас'],
+        ];
       each item in _HEADER_NAVIGATION_LIST
         -
           const [location, text] = item;
