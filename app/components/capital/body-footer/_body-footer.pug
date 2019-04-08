@@ -1,48 +1,26 @@
-mixin footer-list()
-  - const { modifier, list } = attributes;
-  div(class=setModifiers('footer-list', [modifier]))
-    h3.footer-list__caption
-      case modifier
-        when 'goods'
-          = 'Товары'
-        when 'navigation'
-          span(class=setModifiers('footer-list__legend', ['viewport_narrow']))
-            | Карта сайта
-          span(class=setModifiers('footer-list__legend', ['viewport_wide']))
-            | Навигация
-    .footer-list__content
-      ul.footer-list__items
-        each item in list
-          - const [value1, value2] = item;
-          li.footer-list__item
-            case modifier
-              when 'goods'
-                a.footer-list__link(href=value2)= value1
-              when 'navigation'
-                a.footer-list__link(href=`${value1}.html`)= value2
-
 .body-footer
+  -
+    const _FOOTER_CATALOG_LIST = getCatalogList([3, 2, 1, 6, 4, 5]);
+    const _FOOTER_NAVIGATION_LIST = [
+      ['catalog', 'Каталог товаров'],
+      ['discounts', 'Акции'],
+      ['about', 'О нас'],
+      ['news', 'Новости'],
+      ['recipes', 'Рецепты'],
+      ['blog', 'Блог'],
+      ['partnership', 'Сотрудничество'],
+      ['shops', 'Где купить'],
+      ['contacts', 'Контакты'],
+    ];
+    const _FOOTER_LISTS = [
+      ['goods', _FOOTER_CATALOG_LIST],
+      ['navigation', _FOOTER_NAVIGATION_LIST],
+    ];
+
   .s-container.body-footer__container
     .s-row.body-footer__row
       div(class=setModifiers('body-footer__nest', ['listing']))
         ul.body-footer__items
-          -
-            const _FOOTER_CATALOG_LIST = getCatalogList([3, 2, 1, 6, 4, 5]);
-            const _FOOTER_NAVIGATION_LIST = [
-              ['catalog', 'Каталог товаров'],
-              ['discounts', 'Акции'],
-              ['about', 'О нас'],
-              ['news', 'Новости'],
-              ['recipes', 'Рецепты'],
-              ['blog', 'Блог'],
-              ['partnership', 'Сотрудничество'],
-              ['shops', 'Где купить'],
-              ['contacts', 'Контакты'],
-            ];
-            const _FOOTER_LISTS = [
-              ['goods', _FOOTER_CATALOG_LIST],
-              ['navigation', _FOOTER_NAVIGATION_LIST],
-            ];
           each item, index in _FOOTER_LISTS
             - const [modifier, list] = item;
             li(class=setModifiers('body-footer__item', [index + 1]))
