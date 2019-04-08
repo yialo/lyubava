@@ -29,7 +29,7 @@
     }
 
     .d-flex-column-#{$media} {
-
+      @include d-flex-column();
     }
   }
 }
