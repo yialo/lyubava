@@ -1,11 +1,13 @@
-include ../global/data/_d_common.pug
-include ../global/data/_d_pages.pug
+include _import_functions.pug
+
+include ../global/data/_dt_common.pug
+include ../global/data/_dt_pages.pug
 
 block page-id
 
 - const [$pageTitle, $pageHeading] = $PAGES[$pageId];
 
-include _import_functions.pug
+include _import_methods.pug
 include _import_mixins.pug
 
 doctype html

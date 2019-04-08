@@ -1,0 +1,29 @@
+@function get-next-breakpoint($breakpoint-name) {
+  $breakpoints-length: length($breakpoints);
+  $breakpoint-names-list: map-keys($breakpoints);
+  $breakpoints-list: map-values($breakpoints);
+  $breakpoint-index: index($breakpoint-names-list, $breakpoint-name);
+  $next-breakpoint-index: $breakpoint-index + 1;
+
+  @if $next-breakpoint-index > $breakpoints-length {
+    @error "Next breakpoint is not exist.";
+  }
+
+  $next-breakpoint: nth($breakpoints-list, $next-breakpoint-index);
+
+  @return $next-breakpoint;
+}
+
+@mixin media-breakpoint-between($bottom-breakpoint-name, $top-breakpoint-name) {
+  $bottom-breakpoint: get-breakpoint($bottom-breakpoint-name);
+  $top-breakpoint-initial: get-breakpoint($top-breakpoint-name);
+  $top-breakpoint: $top-breakpoint-initial - 0.02px;
+
+  @if ($bottom-breakpoint >= $top-breakpoint-initial) {
+    @error "Please check order of arguments passed.";
+  }
+
+  @media (min-width: $bottom-breakpoint) and (max-width: $top-breakpoint) {
+    @content;
+  }
+}

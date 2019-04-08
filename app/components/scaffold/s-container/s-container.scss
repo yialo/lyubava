@@ -1,0 +1,10 @@
+#{$this} {
+  @include margin-hor();
+  @include padding-hor();
+
+  @each $breakpoint-name, $breakpoint in $breakpoints {
+    @include media-breakpoint-from($breakpoint-name) {
+      max-width: $breakpoint - 32px;
+    }
+  }
+}

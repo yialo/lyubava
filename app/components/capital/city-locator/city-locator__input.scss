@@ -1,0 +1,9 @@
+#{$this}__input {
+  display: inline;
+  padding: 0;
+  vertical-align: top;
+  border-style: none;
+  cursor: pointer;
+
+  @include outline(gray);
+}

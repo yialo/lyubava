@@ -1,13 +1,13 @@
 @import
-  "~normalize.css",
-  "~bootstrap/scss/bootstrap-grid.scss";
+  "~normalize.css";
 
 @import
   "../vendor_customized/*.scss";
 
 @import
-  "../global/data/*.scss",
   "../global/functions/*.scss",
+  "../global/data/*.scss",
+  "../global/methods/*.scss",
   "../global/mixins/*.scss";
 
 @import
@@ -17,9 +17,12 @@
   "../global/styles/_tags.scss";
 
 @import
+  "../components/scaffold/s-container/*.scss",
   "../components/scaffold/s-picture/*.scss",
+  "../components/scaffold/s-row/*.scss",
   "../components/scaffold/s-visually-hidden/*.scss";
 
 @import
   "../components/capital/body-header/*.scss",
+  "../components/capital/city-locator/*.scss",
   "../components/capital/logo/*.scss";
