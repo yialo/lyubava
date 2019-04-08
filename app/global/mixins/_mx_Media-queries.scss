@@ -1,3 +1,25 @@
+// @media: (min-width: ...)
+
+@mixin media-breakpoint-from($breakpoint-name) {
+  $breakpoint: get-breakpoint($breakpoint-name);
+
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// @media: (max-width: ...)
+
+@mixin media-breakpoint-to($breakpoint-name) {
+  $breakpoint: get-breakpoint($breakpoint-name) - 0.02px;
+
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Get next breakpoint value from $breakpoints map
+
 @function get-next-breakpoint($breakpoint-name) {
   $breakpoints-length: length($breakpoints);
   $breakpoint-names-list: map-keys($breakpoints);
@@ -13,6 +35,25 @@
 
   @return $next-breakpoint;
 }
+
+/*
+@media: (min-width: x and (max-width: y),
+where y value is next after x in $breakpoints map
+*/
+
+@mixin media-breakpoint-only($breakpoint-name) {
+  $breakpoint-bottom: get-breakpoint($breakpoint-name);
+  $breakpoint-top: get-next-breakpoint($breakpoint-name) - 0.02px;
+
+  @media (min-width: $breakpoint-bottom) and (max-width: $breakpoint-top) {
+    @content;
+  }
+}
+
+/*
+@media: (min-width: x and (max-width: y),
+where y < x in $breakpoints map
+*/
 
 @mixin media-breakpoint-between($bottom-breakpoint-name, $top-breakpoint-name) {
   $bottom-breakpoint: get-breakpoint($bottom-breakpoint-name);

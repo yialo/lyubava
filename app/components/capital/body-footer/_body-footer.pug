@@ -18,14 +18,17 @@
     ];
 
   .s-container.body-footer__container
-    .s-row.body-footer__row
+    .d-flex-row.body-footer__row
       div(class=setModifiers('body-footer__nest', ['listing']))
-        ul.body-footer__items
+        ul.d-flex-row.body-footer__items
           each item, index in _FOOTER_LISTS
             - const [modifier, list] = item;
             li(class=setModifiers('body-footer__item', [index + 1]))
               +footer-list(modifier=modifier, list=list)
-
       div(class=setModifiers('body-footer__nest', ['relations']))
+        .relations
+          div(class=setModifiers('relations__nest', ['tel']))
+            +tel()(modifier='small')
+          div(class=setModifiers('relations__nest', ['socials']))
 
       div(class=setModifiers('body-footer__nest', ['appendix']))

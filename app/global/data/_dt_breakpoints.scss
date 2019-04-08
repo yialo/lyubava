@@ -5,3 +5,5 @@ $breakpoints: (
   xl: 1200px,
   hg: 1920px,
 );
+
+$breakpoint-names: map-keys($breakpoints);

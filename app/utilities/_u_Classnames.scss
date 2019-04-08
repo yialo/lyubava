@@ -1,0 +1,35 @@
+.d-flex-row {
+  @include d-flex-row();
+}
+
+.d-flex-row-wrap {
+  @include d-flex-row-wrap();
+}
+
+.d-flex-row-nowrap {
+  @include d-flex-row-nowrap();
+}
+
+.d-flex-column {
+  @include d-flex-column();
+}
+
+@each $media in $breakpoint-names {
+  @include media-breakpoint-from($media) {
+    .d-flex-row-#{$media} {
+      @include d-flex-row();
+    }
+
+    .d-flex-row-wrap-#{$media} {
+      @include d-flex-row-wrap();
+    }
+
+    .d-flex-row-nowrap-#{$media} {
+      @include d-flex-row-nowrap();
+    }
+
+    .d-flex-column-#{$media} {
+
+    }
+  }
+}

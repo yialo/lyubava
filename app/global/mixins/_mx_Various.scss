@@ -1,0 +1,18 @@
+@mixin list() {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin outline($color: green) {
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: $color;
+  outline-offset: -1px;
+}
+
+@mixin size($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}

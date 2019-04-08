@@ -1,7 +1,0 @@
-@mixin media-breakpoint-to($breakpoint-name) {
-  $breakpoint: get-breakpoint($breakpoint-name) - 0.02px;
-
-  @media (max-width: $breakpoint) {
-    @content;
-  }
-}
