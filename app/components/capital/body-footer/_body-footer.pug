@@ -1,1 +1,45 @@
+mixin footer-list()
+  - const { modifier, list } = attributes;
+  div(class=setModifiers('footer-list', [modifier]))
+    h3.footer-list__caption
+      case modifier
+        when 'goods'
+          = 'Товары'
+        when 'navigation'
+          span(class=setModifiers('footer-list__legend', ['viewport_narrow']))
+            | Карта сайта
+          span(class=setModifiers('footer-list__legend', ['viewport_wide']))
+            | Навигация
+    .footer-list__content
+      ul.footer-list__items
+        each item in list
+          li.footer-list__item
+            case modifier
+              when 'goods'
+                a.footer-list__link(href=(item === 'Молочная продукция' ?'products.html' : '#'))= item
+              when 'navigation'
+                a.footer-list__link(href='#')
+
 .body-footer
+  .s-container.body-footer__container
+    .s-row.body-footer__row
+      div(class=setModifiers('body-footer__nest', ['listing']))
+        ul.body-footer__items
+          -
+            const _FOOTER_CATALOG_LIST = getCatalogList([3, 2, 1, 6, 4, 5]);
+            const _FOOTER_NAVIGATION_LIST = getNavigationList(
+              [1, 5, 4, 6, 7, 8, 9, 2, 3],
+              'footer'
+            );
+            const _FOOTER_LISTS = [
+              ['goods', _FOOTER_CATALOG_LIST],
+              ['navigation', _FOOTER_NAVIGATION_LIST],
+            ];
+          each item, index in _FOOTER_LISTS
+            - const [modifier, list] = item;
+            li(class=setModifiers('body-footer__item', [index + 1]))
+              +footer-list(modifier=modifier, list=list)
+
+      div(class=setModifiers('body-footer__nest', ['relations']))
+
+      div(class=setModifiers('body-footer__nest', ['appendix']))

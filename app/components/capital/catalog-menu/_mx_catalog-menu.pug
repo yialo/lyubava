@@ -1,9 +1,0 @@
-mixin catalog-menu(props)
-  -
-    const { modifier, order } = props;
-    const catalogMenuList = getCatalogList(order);
-  div(class=setModifiers('catalog-menu', [modifier]))
-    ul.catalog-menu__list
-      each item in catalogMenuList
-        li.catalog-menu__item
-          a.catalog-menu__link(href=(item === 'Молочная продукция' ?'products.html' : '#'))= item

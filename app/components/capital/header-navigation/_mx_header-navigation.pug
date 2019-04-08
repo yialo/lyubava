@@ -2,13 +2,11 @@ mixin header-navigation()
   .header-navigation
     .header-navigation__list
       -
-        const _MAIN_MENU_LIST = [
-          ['catalog', 'Каталог'],
-          ['shops', 'Магазины'],
-          ['contacts', 'Контакты'],
-          ['about', 'О нас'],
-        ];
-      each item in _MAIN_MENU_LIST
+        const _HEADER_NAVIGATION_LIST = getNavigationList(
+          [1, 2, 3, 4],
+          'header'
+        );
+      each item in _HEADER_NAVIGATION_LIST
         -
           const [location, text] = item;
           const isCatalog = (location === 'catalog');
@@ -24,7 +22,4 @@ mixin header-navigation()
           a.header-navigation__link(href=link)= text
           if isCatalog
             .header-navigation__inner-nest
-              +catalog-menu({
-                modifier: 'header',
-                order: [1, 2, 3, 4, 5, 6],
-              })
+              +header-catalog()

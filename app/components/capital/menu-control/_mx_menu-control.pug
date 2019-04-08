@@ -1,0 +1,11 @@
+mixin menu-control
+  .menu-control
+    button(class=setModifiers('menu-control__button', ['opener']), type='button')
+      span.menu-control__legend
+        span.s-visually-hidden.menu-control__hidden= 'Показать '
+        span.menu-control__visible меню
+    button(
+      class=setModifiers('menu-control__button', ['closer']),
+      type='button',
+      aria-label='Скрыть меню',
+    )

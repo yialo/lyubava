@@ -1,0 +1,7 @@
+mixin header-catalog()
+  - const _HEADER_CATALOG_LIST = getCatalogList([1, 2, 3, 4, 5, 6]);
+  .header-catalog
+    ul.header-catalog__list
+      each item in _HEADER_CATALOG_LIST
+        li.header-catalog__item
+          a.header-catalog__link(href=(item === 'Молочная продукция' ?'products.html' : '#'))= item

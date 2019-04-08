@@ -4,16 +4,7 @@
       div(class=setModifiers('body-header__nest', ['logo']))
         +logo('header')
       div(class=setModifiers('body-header__nest', ['menu-control']))
-        .menu-control
-          button(class=setModifiers('menu-control__button', ['opener']), type='button')
-            span.menu-control__legend
-              span.s-visually-hidden.menu-control__hidden= 'Показать '
-              span.menu-control__visible меню
-          button(
-            class=setModifiers('menu-control__button', ['opener']),
-            type='button',
-            aria-label='Скрыть меню',
-          )
+        +menu-control()
       div(class=setModifiers('body-header__nest', ['top-menu']))
         div(class=setModifiers('top-menu', ['narrow-popup', 'wide-line']))
           nav(class=setModifiers('top-menu__nest', ['header-navigation']))
