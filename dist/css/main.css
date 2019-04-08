@@ -3377,14 +3377,21 @@ html {
   font-weight: 400;
   font-family: roboto;
   font-display: swap;
-  src: url("../fonts/roboto-400-normal.woff2") format("woff2"), url("../fonts/roboto-400-normal.woff") format("woff"); }
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-400-normal.woff2") format("woff2"), url("../fonts/roboto-400-normal.woff") format("woff"); }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
   font-family: roboto;
   font-display: swap;
-  src: url("../fonts/roboto-700-normal.woff2") format("woff2"), url("../fonts/roboto-700-normal.woff") format("woff"); }
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-700-normal.woff2") format("woff2"), url("../fonts/roboto-700-normal.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: harmonia_sans_pro_cyr;
+  font-display: swap;
+  src: local("Harmonia Sans Pro Cyr"), local("HarmoniaSansProCyr-Regular"), url("../fonts/harmonia_sans_pro_cyr-400-normal.woff2") format("woff2"), url("../fonts/harmonia_sans_pro_cyr-400-normal.woff") format("woff"); }
 
 /* Root custom properties */
 /* Animations */
