@@ -1,0 +1,12 @@
+extends _template_html.pug
+
+block body-main__Content
+  header.body-main__banner
+    div(class=setModifiers('banner', [$pageId]))
+      .banner__crumbs
+        +crumbs()
+      .banner__heading
+        h1.banner__headline= $pageHeading
+      .banner__overlay
+        .banner__overlay-text= $pageHeading
+    block body-main__Content--inner

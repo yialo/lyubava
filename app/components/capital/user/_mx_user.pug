@@ -5,7 +5,9 @@ mixin user()
         ['cabinet', 'Личный кабинет'],
         ['card', 'Активировать карту'],
       ];
-    each item, index in _USER_LINKS
-      - const [modifier, text] = item;
-      div(class=setModifiers('user__row', [index + 1]))
-        a(class=setModifiers('user__link', [modifier]), href='#')= text
+    .user__row
+      each item, index in _USER_LINKS
+        - const [modifier, text] = item;
+        div(class=setModifiers('user__nest', [index + 1]))
+          a(class=setModifiers('user__link', [modifier]), href='#')
+            span.user__string= text
