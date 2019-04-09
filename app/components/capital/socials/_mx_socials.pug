@@ -2,9 +2,16 @@ mixin socials()
   .socials
     ul.d-flex-row.socials-list
       -
-        const SOCIALS_ITEMS = [
-
+        const _SOCIALS_ITEMS = [
+          ['facebook', 'Facebook'],
+          ['instagram', 'Instagram'],
+          ['vk', 'ВКонтакте'],
         ];
-
-//- TODO:
-  add this block
+      each item in _SOCIALS_ITEMS
+        - const [modifier, label] = item;
+        li.socials__item
+          a(
+            class=setModifiers('socials__link', [modifier]),
+            href=`https://${modifier}.html`,
+            aria-label=label,
+          )
