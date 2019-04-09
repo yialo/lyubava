@@ -1,0 +1,9 @@
+mixin shops()
+  .shops
+    .s-container.shops__container
+      h2.shops__heading Наши магазины
+      .shops__content
+        div(class=setModifiers('shops__nest', ['map']))
+          .map(id='map')
+        div(class=setModifiers('shops__nest', ['select']))
+          include ../shops-select/_shops-select.pug

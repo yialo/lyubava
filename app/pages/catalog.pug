@@ -4,7 +4,7 @@ block page-id
   - const $pageId = 'catalog';
 
 block body-main__Content--inner
-  .body-main__catalog
+  div(class=setModifiers('body-main__nest', ['catalog']))
     .catalog
       .s-container.catalog__container
         +catalog__content()

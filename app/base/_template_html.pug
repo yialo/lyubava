@@ -19,10 +19,12 @@ html(class='page', lang='ru')
         include ../components/capital/body-header/_body-header.pug
       main.body__main
         div(class=[setModifiers('body-main', [$pageId])])
-          aside.body-main__hoister
+          div(class=setModifiers('body-main__nest', ['hoister']))
             .hoister
               button.hoister__button(type='button') Наверх
           block body-main__Content
+          if !$WITHOUT_FEEDBACK.includes($pageId)
+            aside(class=setModifiers('body-main__nest', ['feedback']))
       footer.body__footer
         include ../components/capital/body-footer/_body-footer.pug
     include ../components/capital/body/_body__Scripts.pug

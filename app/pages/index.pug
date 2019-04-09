@@ -15,5 +15,12 @@ block body-main__Content
       .s-container.catalog__container
         .catalog__headline
           h2.catalog__heading В нашем магазине
-          a.catalog__target-link(href='catalog.html') Перейти в каталог
+          .catalog__target-link
+            +arrow-link()(href='catalog.html'): | Перейти в каталог
         +catalog__content()
+  section(class=setModifiers('body-main__nest', ['recipes']))
+
+  section(class=setModifiers('body-main__nest', ['news-preview']))
+
+  section(class=setModifiers('body-main__nest', ['shops']))
+    +shops()
