@@ -12,7 +12,7 @@
   "rules": {
     "max-len": [
       "error",
-      100,
+      80,
       2,
       {
         "ignoreComments": false,

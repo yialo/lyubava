@@ -1,0 +1,20 @@
+.#{$this}__link {
+  $icon-width: 20px;
+  padding-left: $icon-width + 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: black;
+  background-image: url("../img/#{$this}__link.svg");
+  background-position: left;
+  background-size: $icon-width 22px;
+  background-repeat: no-repeat;
+
+  .#{$this}--small & {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .#{$this}--large & {
+    font-size: 30px;
+  }
+}

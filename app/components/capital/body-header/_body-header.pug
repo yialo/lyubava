@@ -2,7 +2,7 @@
   .body-header__container
     .d-flex-row.body-header__grid
       div(class=setModifiers('body-header__nest', ['logo']))
-        +logo('header')
+        +logo()(location='header')
       div(class=setModifiers('body-header__nest', ['menu-control']))
         +menu-control()
       div(class=setModifiers('body-header__nest', ['top-menu']))

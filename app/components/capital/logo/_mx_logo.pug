@@ -1,4 +1,5 @@
-mixin logo(logoLocation)
+mixin logo()
+  - const location = attributes.location;
   .logo
     - const baseWidth = ({ header: 196, footer: 202 });
     a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
@@ -6,7 +7,7 @@ mixin logo(logoLocation)
         alt=$pageHeading,
         path='logo__image',
         ext='png',
-        media-set=[['lg', 264], baseWidth[logoLocation]],
+        media-set=[['lg', 264], baseWidth[location]],
       )
       if $pageId === 'index'
         h1.s-visually-hidden.logo__headline= $pageHeading

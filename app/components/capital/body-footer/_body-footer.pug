@@ -11,8 +11,11 @@
             +socials()
       div(class=setModifiers('body-footer__nest', ['appendix']))
         .appendix
-          p.appendix__item
-            a.appendix__link(href='#') Политика конфиденциальности
-          p.appendix__item
-            a.appendix__link(href='https://www.waytostart.ru/')
-              | Создание сайтов #[span.appendix__string= 'WayToStart']
+          div(class=setModifiers('appendix__nest', ['auxiliary']))
+            p(class=setModifiers('appendix__item', ['privacy-policy']))
+              a.appendix__link(href='#') Политика конфиденциальности
+            p(class=setModifiers('appendix__item', ['creator']))
+              a.appendix__link(href='https://www.waytostart.ru/')
+                | Создание сайтов #[span.appendix__string= 'WayToStart']
+          div(class=setModifiers('appendix__nest', ['logo']))
+            +logo()(location='footer')
