@@ -1,4 +1,4 @@
 .#{$this} {
-  @include margin-ver();
+  @include margin-ver(0);
   display: flex;
 }

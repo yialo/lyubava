@@ -21,10 +21,14 @@
 
 @import
   "../components/scaffold/s-container/*.scss",
+  "../components/scaffold/s-list/*.scss",
+  "../components/scaffold/s-list-item/*.scss",
+  "../components/scaffold/s-paragraph/*.scss",
   "../components/scaffold/s-picture/*.scss",
   "../components/scaffold/s-visually-hidden/*.scss";
 
 @import
+  "../components/capital/about/*.scss",
   "../components/capital/arrow-link/*.scss",
   "../components/capital/body-header/*.scss",
   "../components/capital/city-locator/*.scss",

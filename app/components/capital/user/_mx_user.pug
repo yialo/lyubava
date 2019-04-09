@@ -5,7 +5,7 @@ mixin user()
         ['cabinet', 'Личный кабинет'],
         ['card', 'Активировать карту'],
       ];
-    .user__row
+    .user__grid
       each item, index in _USER_LINKS
         - const [modifier, text] = item;
         div(class=setModifiers('user__nest', [index + 1]))

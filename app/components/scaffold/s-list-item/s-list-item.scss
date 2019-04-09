@@ -1,0 +1,19 @@
+.#{$this} {
+  $bullet-width: 9px;
+
+  position: relative;
+  padding-left: 18px + $bullet-width;
+  font-size: 16px;
+  line-height: 25px;
+  color: black;
+
+  &::before {
+    @include size($bullet-width);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    background-color: $color-green;
+    border-radius: 50%;
+  }
+}

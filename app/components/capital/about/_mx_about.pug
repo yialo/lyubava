@@ -1,0 +1,17 @@
+mixin about()
+  .about
+    .s-container.about__container
+      .about__grid
+        div(class=setModifiers('about__nest', ['text']))
+          include _about__nest--text__Content.pug
+        div(class=setModifiers('about__nest', ['decoration']))
+          a.about__video-link(href='#')
+            +s-picture().about__picture(
+              alt='Видеоролик о нашей компании',
+              path='about__image',
+              ext='jpg',
+              media-set=[495],
+            )
+            span.about__video-string Смотреть видео
+          .about__target-link
+            +arrow-link(href='about.html'): | Подробнее
