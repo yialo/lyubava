@@ -1,0 +1,13 @@
+.#{$this}__link {
+  @include size(32px, 33px);
+  display: block;
+  background-repeat: no-repeat;
+
+  $modifiers: (facebook, instagram, vk,);
+
+  @each $modifier in $modifiers {
+    &--#{$modifier} {
+      background-image: url("../img/#{$this}__link--#{$modifier}.svg");
+    }
+  }
+}

@@ -1,6 +1,6 @@
 mixin socials()
   .socials
-    ul.socials-list
+    ul.s-list.socials__list.d-flex-row
       -
         const _SOCIALS_ITEMS = [
           ['facebook', 'Facebook'],
@@ -12,6 +12,6 @@ mixin socials()
         li.socials__item
           a(
             class=setModifiers('socials__link', [modifier]),
-            href=`https://${modifier}.html`,
+            href=`https://${modifier}.com/`,
           )
             span.s-visually-hidden.socials__string= legend
