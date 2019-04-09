@@ -3,7 +3,7 @@
   margin-right: $mh;
 }
 
-@mixin margin-ver($mv: auto) {
+@mixin margin-ver($mv: 0) {
   margin-top: $mv;
   margin-bottom: $mv;
 }
@@ -13,7 +13,7 @@
   padding-right: $ph;
 }
 
-@mixin padding-ver($pv: 10px) {
+@mixin padding-ver($pv: 16px) {
   padding-top: $pv;
   padding-bottom: $pv;
 }

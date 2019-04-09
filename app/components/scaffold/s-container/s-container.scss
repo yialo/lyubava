@@ -1,6 +1,6 @@
 #{$this} {
   @include margin-hor();
-  @include padding-hor();
+  @include padding-hor(20px);
 
   @each $breakpoint-name, $breakpoint in $breakpoints {
     @include media-breakpoint-from($breakpoint-name) {
