@@ -1,17 +1,12 @@
 mixin logo(logoLocation)
   .logo
-    -
-      const getLogoProps = function getLogoImageProperties(location) {
-        const baseWidth = ({ header: 196, footer: 202 });
-        const LOGO_IMAGES_DATA = {
-          alt: $pageHeading,
-          path: 'logo__image',
-          ext: 'png',
-          mediaSet: [['lg', 264], baseWidth[location]],
-        };
-        return LOGO_IMAGES_DATA;
-      };
+    - const baseWidth = ({ header: 196, footer: 202 });
     a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
-      +s-picture(getLogoProps(logoLocation)).logo__picture
+      +s-picture().logo__picture(
+        alt=$pageHeading,
+        path='logo__image',
+        ext='png',
+        media-set=[['lg', 264], baseWidth[logoLocation]],
+      )
       if $pageId === 'index'
         h1.s-visually-hidden.logo__headline= $pageHeading

@@ -1,8 +1,7 @@
-mixin s-picture(sPicture_props)
+mixin s-picture()
   -
-    const { class: classNames } = attributes;
-    const getPictureData = function (props) {
-      const { path, ext='jpg', mediaSet } = props;
+    const { class: classNames, alt, path, ext='jpg', 'media-set': mediaSet } = attributes;
+    const getData = function getPictureData() {
       const _BREAKPOINTS = { lg: '(min-width: 992px)' };
       const lastIndex = mediaSet.length - 1;
       let finalSet = { srcset: '', sizes: '' };
@@ -27,10 +26,10 @@ mixin s-picture(sPicture_props)
     };
 
   picture.s-picture(class=classNames)
-    - const { srcset, sizes, src } = getPictureData(sPicture_props);
+    - const { srcset, sizes, src } = getData();
     img.s-picture__image(
       srcset=srcset,
       sizes=sizes,
       src=src,
-      alt=sPicture_props.alt,
+      alt=alt,
     )
