@@ -1,0 +1,30 @@
+ul.body-footer__items
+  include _dt_body-footer.pug
+  li(class=setModifiers('body-footer__item', [1]))
+    div(class=setModifiers('footer-list', ['cagalog']))
+      h3.footer-list__caption= 'Товары'
+      .footer-list__content
+        ul.footer-list__items
+          each item in _FOOTER_CATALOG_LIST
+            - const [text, path] = item;
+            li.footer-list__item
+              a.footer-list__link(href=path)= text
+  li(class=setModifiers('body-footer__item', [2]))
+    div(class=setModifiers('footer-list', ['navigation']))
+      h3.footer-list__caption
+        span(class=setModifiers('footer-list__legend', ['viewport_narrow']))
+          | Карта сайта
+        span(class=setModifiers('footer-list__legend', ['viewport_wide']))
+          | Навигация
+      .footer-list__content
+        ul.footer-list__items
+          each item in _FOOTER_NAVIGATION_LIST
+            -
+              const [text, target] = item;
+              let path = `${target}.html`;
+            if target === $pageId
+              - path = null;
+            else if $EMPTY_PATHS.includes(target)
+              - path = '#';
+            li.footer-list__item
+              a.footer-list__link(href=path)= text

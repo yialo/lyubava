@@ -1,0 +1,25 @@
+-
+  const _CATALOG_IMAGES = {
+    'meat': [572],
+    'ready-meals': [250],
+    'greenery': [298],
+    'confectionery': [265],
+    'grocery': [285],
+    'dairy': [568],
+  };
+  const getFullItem = function getFullCatalogItemArray(modifier) {
+    const fullItem = [
+      modifier,
+      ...$CATALOG_ITEMS[modifier],
+      _CATALOG_IMAGES[modifier],
+    ];
+    return fullItem;
+  };
+  const _MAIN_CATALOG_LIST = [
+    getFullItem('meat'),
+    getFullItem('ready-meals'),
+    getFullItem('greenery'),
+    getFullItem('confectionery'),
+    getFullItem('grocery'),
+    getFullItem('dairy'),
+  ];

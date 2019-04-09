@@ -2,7 +2,7 @@ mixin s-picture(sPicture_props)
   -
     const { class: classNames } = attributes;
     const getPictureData = function (props) {
-      const { path, ext, mediaSet } = props;
+      const { path, ext='jpg', mediaSet } = props;
       const _BREAKPOINTS = { lg: '(min-width: 992px)' };
       const lastIndex = mediaSet.length - 1;
       let finalSet = { srcset: '', sizes: '' };

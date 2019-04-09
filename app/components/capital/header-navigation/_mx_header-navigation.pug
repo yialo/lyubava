@@ -1,27 +1,27 @@
 mixin header-navigation()
   .header-navigation
-    .header-navigation__list
+    ul.header-navigation__list
       -
         const _HEADER_NAVIGATION_LIST = [
-          ['catalog', 'Каталог'],
-          ['shops', 'Магазины'],
-          ['contacts', 'Контакты'],
-          ['about', 'О нас'],
+          ['Каталог', 'catalog'],
+          ['Магазины', 'shops'],
+          ['Контакты', 'contacts'],
+          ['О нас', 'about'],
         ];
       each item in _HEADER_NAVIGATION_LIST
         -
-          const [location, text] = item;
-          const isCatalog = (location === 'catalog');
-          let link = `${location}.html`;
-        if location === $pageId
-          - link = null;
-        else if location === 'shops'
-          - link = '#';
+          const [text, target] = item;
+          const isCatalog = (target === 'catalog');
+          let path = `${target}.html`;
+        if target === $pageId
+          - path = null;
+        else if $EMPTY_PATHS.includes(target)
+          - path = '#';
         li(class=[
           'header-navigation__item',
-          isCatalog ? `header-navigation__item--${location}` : null,
+          isCatalog ? `header-navigation__item--${target}` : null,
         ])
-          a.header-navigation__link(href=link)= text
+          a.header-navigation__link(href=path)= text
           if isCatalog
             .header-navigation__inner-nest
               +header-catalog()

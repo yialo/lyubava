@@ -1,34 +1,12 @@
 .body-footer
-  -
-    const _FOOTER_CATALOG_LIST = getCatalogList([3, 2, 1, 6, 4, 5]);
-    const _FOOTER_NAVIGATION_LIST = [
-      ['catalog', 'Каталог товаров'],
-      ['discounts', 'Акции'],
-      ['about', 'О нас'],
-      ['news', 'Новости'],
-      ['recipes', 'Рецепты'],
-      ['blog', 'Блог'],
-      ['partnership', 'Сотрудничество'],
-      ['shops', 'Где купить'],
-      ['contacts', 'Контакты'],
-    ];
-    const _FOOTER_LISTS = [
-      ['goods', _FOOTER_CATALOG_LIST],
-      ['navigation', _FOOTER_NAVIGATION_LIST],
-    ];
-
   .s-container.body-footer__container
-    .d-flex-row.body-footer__row
+    .body-footer__row
       div(class=setModifiers('body-footer__nest', ['listing']))
-        ul.d-flex-row.body-footer__items
-          each item, index in _FOOTER_LISTS
-            - const [modifier, list] = item;
-            li(class=setModifiers('body-footer__item', [index + 1]))
-              +footer-list(modifier=modifier, list=list)
+        include _body-footer__items.pug
       div(class=setModifiers('body-footer__nest', ['relations']))
         .relations
           div(class=setModifiers('relations__nest', ['tel']))
             +tel()(modifier='small')
           div(class=setModifiers('relations__nest', ['socials']))
-
+            +socials()
       div(class=setModifiers('body-footer__nest', ['appendix']))

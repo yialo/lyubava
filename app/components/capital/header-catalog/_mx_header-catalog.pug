@@ -1,7 +1,15 @@
 mixin header-catalog()
   .header-catalog
     ul.header-catalog__list
-      - const _HEADER_CATALOG_LIST = getCatalogList([1, 2, 3, 4, 5, 6]);
+      -
+        const _HEADER_CATALOG_LIST = [
+          $CATALOG_ITEMS['greenery'],
+          $CATALOG_ITEMS['ready-meals'],
+          $CATALOG_ITEMS['meat'],
+          $CATALOG_ITEMS['dairy'],
+          $CATALOG_ITEMS['grocery'],
+          $CATALOG_ITEMS['confectionery'],
+        ];
       each item in _HEADER_CATALOG_LIST
         - const [text, path] = item;
         li.header-catalog__item

@@ -1,0 +1,24 @@
+mixin catalog()
+  .catalog
+    .s-container.catalog__container
+      block
+      .catalog__headline(class=($pageId === 'index' ? null : 's-visually-hidden'))
+        h2.catalog__heading В нашем магазине
+        a.catalog__target-link(href='catalog.html') Перейти в каталог
+      .catalog__content
+        ul.catalog__list
+          include _dt_catalog.pug
+          each item, index in _MAIN_CATALOG_LIST
+            -
+              const n = index + 1;
+              const [modifier, text, path, mediaSet] = item;
+            li(class=setModifiers('catalog__item', [n]))
+              div(class=setModifiers('catalog-item', [modifier]))
+                a.catalog-item__link(href=path)
+                  +s-picture({
+                    alt: text,
+                    path: `catalog-item__image--${modifier}`,
+                    ext: 'jpg',
+                    mediaSet: mediaSet,
+                  })
+                  h3.catalog-item__caption= text
