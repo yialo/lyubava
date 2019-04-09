@@ -11,4 +11,9 @@ block body-main__Content
   section(class=setModifiers('body-main__nest', ['advantages']))
     .advantages
   section(class=setModifiers('body-main__nest', ['catalog']))
-    +catalog()
+    .catalog
+      .s-container.catalog__container
+        .catalog__headline
+          h2.catalog__heading В нашем магазине
+          a.catalog__target-link(href='catalog.html') Перейти в каталог
+        +catalog__content()

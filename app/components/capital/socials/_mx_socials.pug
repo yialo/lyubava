@@ -1,6 +1,6 @@
 mixin socials()
   .socials
-    ul.d-flex-row.socials-list
+    ul.socials-list
       -
         const _SOCIALS_ITEMS = [
           ['facebook', 'Facebook'],
@@ -8,10 +8,10 @@ mixin socials()
           ['vk', 'ВКонтакте'],
         ];
       each item in _SOCIALS_ITEMS
-        - const [modifier, label] = item;
+        - const [modifier, legend] = item;
         li.socials__item
           a(
             class=setModifiers('socials__link', [modifier]),
             href=`https://${modifier}.html`,
-            aria-label=label,
           )
+            span.s-visually-hidden.socials__string= legend
