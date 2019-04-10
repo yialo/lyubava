@@ -1,0 +1,23 @@
+.#{$this}__container {
+  background-image: url("../img/#{$this}__container-Background-1.svg");
+  background-position: 50% 100%;
+  background-size: auto 118px;
+  background-repeat: no-repeat;
+
+  @include outline(blue);
+
+  // @include media-breakpoint-from(lg) {
+  //   background-image:
+  //     url("../img/#{$this}__container-Background-1.svg"),
+  //     url("../img/#{$this}__container-Background-2.svg");
+  //   background-position:
+  //     calc(100% - 81px) 100%,
+  //     0 0;
+  //   background-size:
+  //     1109px 154px,
+  //     954px 23px;
+  //   background-repeat:
+  //     no-repeat,
+  //     no-repeat;
+  // }
+}

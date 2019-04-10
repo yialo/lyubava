@@ -1,4 +1,11 @@
 .#{$this}__container {
   @include padding-hor(27px);
-  @include outline();
+  background-image: url("../img/#{$this}__container.svg");
+  background-position: 0 0;
+  background-size: auto 85px;
+  background-repeat: no-repeat;
+
+  // @include media-breakpoint-from(lg) {
+  //   background-size: 1920px 110px;
+  // }
 }

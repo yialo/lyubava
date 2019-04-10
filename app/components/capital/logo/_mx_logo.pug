@@ -1,6 +1,6 @@
 mixin logo()
   - const location = attributes.location;
-  .logo
+  div(class=setModifiers('logo', [location]))
     - const baseWidth = ({ header: 196, footer: 202 });
     a.logo__link(href=($pageId === 'index' ? null : 'index.html'))
       +s-picture().logo__picture(

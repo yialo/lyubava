@@ -9,7 +9,7 @@
     @include size(202px, 54px);
   }
 
-  @include media-breakpoint-from(lg) {
-    @include size(264px, 71px);
-  }
+  // @include media-breakpoint-from(lg) {
+  //   @include size(264px, 71px);
+  // }
 }
