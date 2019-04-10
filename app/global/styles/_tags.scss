@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: $page-min-width;
   margin: 0;
   font-weight: 400;
   font-style: normal;

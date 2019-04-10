@@ -28,5 +28,5 @@ mixin header-navigation()
             div(class=setModifiers('header-navigation__inner-nest', ['catalog']))
               +header-catalog()
         else
-          li.header-navigation__item
+          li(class=setModifiers('header-navigation__item', ['basic']))
             a.header-navigation__link(href=path)= text

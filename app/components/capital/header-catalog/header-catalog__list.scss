@@ -1,0 +1,6 @@
+.#{$this}__list {
+  @include margin-ver(-$gutter);
+  display: flex;
+  flex-direction: column;
+  width: 224px;
+}

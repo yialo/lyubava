@@ -4,6 +4,8 @@
     padding-bottom: 28px;
     background-color: white;
 
+    @include outline(red);
+
     // @include media-breakpoint-to(lg) {
 
     // }

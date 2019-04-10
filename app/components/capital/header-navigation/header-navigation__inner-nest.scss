@@ -1,0 +1,18 @@
+.#{$this}__inner-nest {
+  &--link {
+    @include padding-hor(5px);
+    flex: 1 0 auto;
+  }
+
+  &--button {
+    align-self: center;
+    margin-right: 5px;
+  }
+
+  &--catalog {
+    flex: 1 0 auto;
+    border-top: $header-menu-border;
+
+    margin-top: 15px;
+  }
+}

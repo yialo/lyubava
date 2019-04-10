@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   border-style: none;
 
-  &.is-expanded {
+  &.#{$js-hook} {
     background-image: url("../img/#{$this}_Up.svg");
   }
 }

@@ -2,7 +2,7 @@
   &--opener {
     display: inline;
 
-    .is-expanded & {
+    .#{$js-hook} & {
       display: none;
     }
   }
@@ -10,7 +10,7 @@
   &--closer {
     display: none;
 
-    .is-expanded & {
+    .#{$js-hook} & {
       display: inline;
     }
   }

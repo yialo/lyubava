@@ -1,0 +1,19 @@
+.#{$this}__item {
+  @include padding-ver(15px);
+  border-bottom: $header-menu-border;
+
+  &--basic {
+    @include padding-hor(5px);
+  }
+
+  &--catalog {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-bottom: 8px;
+
+    // &.#{$js-hook} {
+
+    // }
+  }
+}

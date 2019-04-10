@@ -1,4 +1,23 @@
 .#{$this}__link {
+  @include padding-ver($gutter);
+  position: relative;
+  display: block;
+  padding-left: 40px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 27px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   $icons: (
     greenery: 27,
     ready-meals: 24,
@@ -8,19 +27,8 @@
     confectionery: 27,
   );
 
-  display: block;
-  padding-top: 28px;
-  padding-bottom: 18px;
-  padding-left: 22px;
-  padding-right: 56px;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: black;
-  background-position: left;
-  background-repeat: no-repeat;
-
   @each $modifier, $width in $icons {
-    &--#{$modifier} {
+    &--#{$modifier}::before {
       background-image: url("../img/#{$this}__link--#{$modifier}.svg");
       background-size: #{$width}px #{$width}px;
     }
