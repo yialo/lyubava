@@ -1,4 +1,26 @@
 .#{$this}__field {
+  $icon-mark-width: 14px;
+  $icon-mark-shift: 2px;
+  $icon-arrow-width: 21px;
+  $icon-arrow-shift: 6px;
+
   display: block;
+  padding-top: 4px;
+  padding-bottom: 11px;
+  padding-left: $icon-mark-shift + $icon-mark-width + 12px;
+  padding-right: $icon-arrow-shift;
+  background-image:
+    url("../img/#{$this}__field--Mark.svg"),
+    url("../img/#{$this}__field--Arrow.svg");
+  background-position:
+    $icon-mark-shift calc(100% - 11px),
+    calc(100% - #{$icon-arrow-shift}) calc(100% - 13px);
+  background-size:
+    $icon-mark-width 21px,
+    $icon-arrow-width 12px;
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  border-bottom: 1px solid #cbcbcb;
   cursor: pointer;
 }

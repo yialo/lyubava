@@ -2,8 +2,9 @@
   display: inline;
   padding: 0;
   vertical-align: top;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #5a5a5a;
   border-style: none;
-  cursor: pointer;
-
-  @include outline(gray);
+  pointer-events: none;
 }
