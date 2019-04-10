@@ -1,10 +1,10 @@
-ul.body-footer__items
+ul.s-list.body-footer__items
   include _dt_body-footer.pug
   li(class=setModifiers('body-footer__item', [1]))
-    div(class=setModifiers('footer-list', ['cagalog']))
+    div(class=setModifiers('footer-list', ['catalog']))
       h3.footer-list__caption= 'Товары'
       .footer-list__content
-        ul.footer-list__items
+        ul.s-list.footer-list__items
           each item in _FOOTER_CATALOG_LIST
             - const [text, path] = item;
             li.footer-list__item
@@ -17,7 +17,7 @@ ul.body-footer__items
         span(class=setModifiers('footer-list__legend', ['viewport_wide']))
           | Навигация
       .footer-list__content
-        ul.footer-list__items
+        ul.s-list.footer-list__items
           each item in _FOOTER_NAVIGATION_LIST
             -
               const [text, target] = item;
