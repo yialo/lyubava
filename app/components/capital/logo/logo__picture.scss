@@ -1,6 +1,13 @@
-#{$this}__picture {
-  @include size(196px, 52px);
+.#{$this}__picture {
   object-fit: cover;
+
+  .#{$this}--header & {
+    @include size(196px, 52px);
+  }
+
+  .#{$this}--footer & {
+    @include size(202px, 54px);
+  }
 
   @include media-breakpoint-from(lg) {
     @include size(264px, 71px);

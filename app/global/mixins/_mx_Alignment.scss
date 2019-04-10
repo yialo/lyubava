@@ -1,3 +1,7 @@
-@mixin flex-align-items-start {
-  align-items: flex-start;
+@mixin j-content-space-between {
+  justify-content: space-between;
+}
+
+@mixin j-content-space-around {
+  justify-content: space-around;
 }

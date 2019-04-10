@@ -4,7 +4,7 @@
       div(class=setModifiers('body-footer__nest', ['listing']))
         include _body-footer__items.pug
       div(class=setModifiers('body-footer__nest', ['relations']))
-        .relations
+        div(class=setModifiers('relations', ['short']))
           div(class=setModifiers('relations__nest', ['tel']))
             +tel()(modifier='small')
           div(class=setModifiers('relations__nest', ['socials']))

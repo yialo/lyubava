@@ -1,5 +1,5 @@
 .#{$this}__link {
-  @include size(32px, 33px);
+  @include size($socials-item-width, 33px);
   display: block;
   background-repeat: no-repeat;
 

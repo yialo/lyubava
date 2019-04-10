@@ -5,7 +5,7 @@
   ],
   "description": "Lyubava site development",
   "devDependencies": {
-    "autoprefixer": "9.5.0",
+    "autoprefixer": "9.5.1",
     "browser-sync": "2.26.3",
     "del": "4.1.0",
     "eslint": "5.16.0",

@@ -14,6 +14,14 @@
   @include d-flex-column();
 }
 
+.j-content-space-between {
+  @include j-content-space-between();
+}
+
+.j-content-space-around {
+  @include j-content-space-around();
+}
+
 @each $media in $breakpoint-names {
   @include media-breakpoint-from($media) {
     .d-flex-row-#{$media} {
@@ -30,6 +38,14 @@
 
     .d-flex-column-#{$media} {
       @include d-flex-column();
+    }
+
+    .j-content-space-between-#{$media} {
+      @include j-content-space-between();
+    }
+
+    .j-content-space-around-#{$media} {
+      @include j-content-space-around();
     }
   }
 }

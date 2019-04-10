@@ -1,0 +1,12 @@
+.#{$this}__item {
+  @include margin-ver(0);
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: $color-brown;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

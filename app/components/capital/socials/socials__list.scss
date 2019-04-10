@@ -1,3 +1,5 @@
 .#{$this}__list {
-  @include margin-hor(-$socials-gutter / 2);
+  display: flex;
+  justify-content: space-between;
+  width: $socials-item-width * 3 + $socials-list-gutter * 2;
 }

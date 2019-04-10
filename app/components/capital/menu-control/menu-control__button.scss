@@ -1,0 +1,21 @@
+.#{$this}__button {
+  padding: 0;
+  background-color: transparent;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  border-style: none;
+
+  &--opener {
+    @include size(45px, 49px);
+    background-image: url("../img/#{$this}__button--opener.svg");
+    background-position-y: top;
+    background-size: 100% 24px;
+  }
+
+  &--closer {
+    @include size(35px);
+    background-image: url("../img/#{$this}__button--closer.svg");
+    background-position-y: center;
+    background-size: cover;
+  }
+}
