@@ -1,0 +1,7 @@
+.#{$this}__nest {
+  @include margin-ver(0);
+
+  &--1 {
+    margin-bottom: 26px;
+  }
+}

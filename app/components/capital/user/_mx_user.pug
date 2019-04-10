@@ -8,6 +8,5 @@ mixin user()
     .user__grid
       each item, index in _USER_LINKS
         - const [modifier, text] = item;
-        div(class=setModifiers('user__nest', [index + 1]))
-          a(class=setModifiers('user__link', [modifier]), href='#')
-            span.user__string= text
+        p(class=setModifiers('user__nest', [index + 1]))
+          a(class=setModifiers('user__link', [modifier]), href='#')= text
