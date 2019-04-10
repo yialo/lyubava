@@ -1,6 +1,6 @@
 mixin header-navigation()
   .header-navigation
-    ul.header-navigation__list
+    ul.s-list.header-navigation__list
       -
         const _HEADER_NAVIGATION_LIST = [
           ['Каталог', 'catalog'],
@@ -11,17 +11,22 @@ mixin header-navigation()
       each item in _HEADER_NAVIGATION_LIST
         -
           const [text, target] = item;
-          const isCatalog = (target === 'catalog');
           let path = `${target}.html`;
         if target === $pageId
           - path = null;
         else if $EMPTY_PATHS.includes(target)
           - path = '#';
-        li(class=[
-          'header-navigation__item',
-          isCatalog ? `header-navigation__item--${target}` : null,
-        ])
-          a.header-navigation__link(href=path)= text
-          if isCatalog
-            .header-navigation__inner-nest
+        if target === 'catalog'
+          li(class=setModifiers('header-navigation__item', ['catalog']))
+            div(class=setModifiers('header-navigation__inner-nest', ['link']))
+              a(
+                class=setModifiers('header-navigation__link', ['green']),
+                href=path,
+              )= text
+            div(class=setModifiers('header-navigation__inner-nest', ['button']))
+              +dropdown-button()(classnames='header-navigation__button')
+            div(class=setModifiers('header-navigation__inner-nest', ['catalog']))
               +header-catalog()
+        else
+          li.header-navigation__item
+            a.header-navigation__link(href=path)= text

@@ -1,0 +1,11 @@
+.#{$this}__link {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: black;
+
+  &--green {
+    text-transform: uppercase;
+    color: $color-green;
+  }
+}

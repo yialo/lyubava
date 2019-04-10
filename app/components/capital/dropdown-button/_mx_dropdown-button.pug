@@ -1,0 +1,8 @@
+mixin dropdown-button()
+  - const classnames = attributes.class;
+  button.dropdown-button(type='button')
+    - const _LEGENDS = [['opener', 'Развернуть'], ['closer', 'Свернуть']];
+    each legend in _LEGENDS
+      - [modifier, text] = legend;
+      span.s-visually-hidden(class=setModifiers('dropdown-button__legend', [modifier]))
+        | #{text} список

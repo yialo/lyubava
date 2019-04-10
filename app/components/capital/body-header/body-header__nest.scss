@@ -3,4 +3,10 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+
+  &--top-menu {
+    width: 315px;
+
+    @include outline(red);
+  }
 }

@@ -1,0 +1,14 @@
+.#{$this} {
+  @include size(21px, 12px);
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/#{$this}_Down.svg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-style: none;
+
+  &.is-expanded {
+    background-image: url("../img/#{$this}_Up.svg");
+  }
+}

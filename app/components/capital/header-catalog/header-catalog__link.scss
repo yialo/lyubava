@@ -1,0 +1,28 @@
+.#{$this}__link {
+  $icons: (
+    greenery: 27,
+    ready-meals: 24,
+    meat: 24,
+    dairy: 27,
+    grocery: 25,
+    confectionery: 27,
+  );
+
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  padding-right: 56px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: black;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  @each $modifier, $width in $icons {
+    &--#{$modifier} {
+      background-image: url("../img/#{$this}__link--#{$modifier}.svg");
+      background-size: #{$width}px #{$width}px;
+    }
+  }
+}

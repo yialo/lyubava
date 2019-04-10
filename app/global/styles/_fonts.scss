@@ -1,6 +1,10 @@
 $font-properties: (
   roboto: (
-    font-weights: (400 "Roboto" "Roboto-Regular", 700 "Roboto Bold" "Roboto-Bold",),
+    font-weights: (
+      400 "Roboto" "Roboto-Regular",
+      500 "Roboto Medium" "Roboto-Medium",
+      700 "Roboto Bold" "Roboto-Bold",
+    ),
     font-styles: normal,
   ),
   harmonia_sans_pro_cyr: (

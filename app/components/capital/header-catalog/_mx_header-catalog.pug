@@ -1,16 +1,32 @@
 mixin header-catalog()
   .header-catalog
-    ul.header-catalog__list
+    ul.s-list.header-catalog__list
       -
-        const _HEADER_CATALOG_LIST = [
-          $CATALOG_ITEMS['greenery'],
-          $CATALOG_ITEMS['ready-meals'],
-          $CATALOG_ITEMS['meat'],
-          $CATALOG_ITEMS['dairy'],
-          $CATALOG_ITEMS['grocery'],
-          $CATALOG_ITEMS['confectionery'],
+        const _HEADER_CATALOG_MODIFIERS = [
+          'greenery',
+          'ready-meals',
+          'meat',
+          'dairy',
+          'grocery',
+          'confectionery',
         ];
+        const getList = function getHeaderCatalogList() {
+          const catalogList = [];
+          for (let i = 0; i < _HEADER_CATALOG_MODIFIERS.length; i += 1) {
+            const currentModifier = _HEADER_CATALOG_MODIFIERS[i];
+            const currentItem = $CATALOG_ITEMS[currentModifier];
+            const currentHeaderItem = [currentModifier, ...currentItem];
+            catalogList.push(currentHeaderItem);
+          }
+
+          return catalogList;
+        };
+        const _HEADER_CATALOG_LIST = getList();
+
       each item in _HEADER_CATALOG_LIST
-        - const [text, path] = item;
+        - const [modifier, text, path] = item;
         li.header-catalog__item
-          a.header-catalog__link(href=path)= text
+          a(
+            class=setModifiers('header-catalog__link', [modifier]),
+            href=path,
+          )= text

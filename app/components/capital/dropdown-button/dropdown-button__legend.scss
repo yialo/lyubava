@@ -1,0 +1,17 @@
+.#{$this}__legend {
+  &--opener {
+    display: inline;
+
+    .is-expanded & {
+      display: none;
+    }
+  }
+
+  &--closer {
+    display: none;
+
+    .is-expanded & {
+      display: inline;
+    }
+  }
+}
