@@ -2,6 +2,7 @@
   &--logo {
     margin-top: 10px;
     margin-bottom: 20px;
+    margin-right: auto;
   }
 
   &--top-menu {
@@ -9,6 +10,15 @@
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
     width: 314px;
+
+    .#{$js-hook} & {
+      display: block;
+    }
+  }
+
+  &--menu-control {
+    margin-top: 22px;
   }
 }

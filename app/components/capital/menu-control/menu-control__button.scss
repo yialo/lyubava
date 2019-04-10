@@ -7,15 +7,25 @@
 
   &--opener {
     @include size(45px, 49px);
+    display: block;
     background-image: url("../img/#{$this}__button--opener.svg");
     background-position-y: top;
     background-size: 100% 24px;
+
+    .#{$js-hook} & {
+      display: none;
+    }
   }
 
   &--closer {
     @include size(35px);
+    display: none;
     background-image: url("../img/#{$this}__button--closer.svg");
     background-position-y: center;
     background-size: cover;
+
+    .#{$js-hook} & {
+      display: block;
+    }
   }
 }

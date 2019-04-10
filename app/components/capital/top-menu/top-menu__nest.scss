@@ -1,5 +1,13 @@
 .#{$this}__nest {
+  &--header-navigation {
+    margin-bottom: 43px;
+  }
+
   &--contacts-line {
     order: 1;
+  }
+
+  &--user {
+    margin-bottom: 17px;
   }
 }

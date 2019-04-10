@@ -9,14 +9,14 @@ const headerCatalogButton = headerNavigation
 
 // Classnames
 
-const menuExpanded = 'is-menu-expanded';
-const buttonTargetExpanded = 'is-target-expanded';
+const topCatalogMenuExpanded = 'is-menu-expanded';
+const topCatalogButtonTargetExpanded = 'is-target-expanded';
 
 // Button click handler
 
 const onCatalogButtonClick = function catalogButtonClickHandler() {
-  headerNavigation.classList.toggle(menuExpanded);
-  headerCatalogButton.classList.toggle(buttonTargetExpanded);
+  headerNavigation.classList.toggle(topCatalogMenuExpanded);
+  headerCatalogButton.classList.toggle(topCatalogButtonTargetExpanded);
 };
 
 // Click listener
