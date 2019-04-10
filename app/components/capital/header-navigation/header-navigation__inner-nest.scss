@@ -11,8 +11,12 @@
 
   &--catalog {
     flex: 1 0 auto;
+    display: none;
+    margin-top: 15px;
     border-top: $header-menu-border;
 
-    margin-top: 15px;
+    .#{$js-hook} & {
+      display: block;
+    }
   }
 }
