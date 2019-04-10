@@ -7,6 +7,11 @@ mixin city-locator()
         value='Москва',
         readonly,
       )
-    ul.s-list.city-locator__list
-      each city in $CITIES
-        li.city-locator__item= city
+    .city-locator__dropdown
+      ul.s-list.city-locator__list
+        each city, index in $CITIES
+          li(class=[
+            'city-locator__item',
+            index === $CITIES.length - 1 ? 'city-locator__item--last' : null,
+          ])
+            a.city-locator__link(href='#')= city

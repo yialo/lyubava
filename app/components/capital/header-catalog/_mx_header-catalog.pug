@@ -26,7 +26,11 @@ mixin header-catalog()
       each item in _HEADER_CATALOG_LIST
         - const [modifier, text, path] = item;
         li.header-catalog__item
+          - const isProductsPage = ($pageId === 'products' && modifier === 'dairy');
           a(
-            class=setModifiers('header-catalog__link', [modifier]),
-            href=path,
+            class=[
+              setModifiers('header-catalog__link', [modifier]),
+              isProductsPage ? 'header-catalog__link--current' : null,
+            ],
+            href=(isProductsPage ? null : path),
           )= text

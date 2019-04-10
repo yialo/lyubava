@@ -33,4 +33,9 @@
       background-size: #{$width}px #{$width}px;
     }
   }
+
+  &--current {
+    text-transform: uppercase;
+    color: $color-green;
+  }
 }
