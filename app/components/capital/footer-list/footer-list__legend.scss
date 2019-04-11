@@ -1,0 +1,15 @@
+.#{$this}__legend {
+  &--viewport_wide {
+    display: none;
+  }
+
+  @include media-breakpoint-from(lg) {
+    &--viewport_narrow {
+      display: none;
+    }
+
+    &--viewport_wide {
+      display: inline;
+    }
+  }
+}
