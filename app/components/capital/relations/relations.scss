@@ -1,0 +1,5 @@
+.#{$this} {
+  &--short {
+    @include padding-hor(10px);
+  }
+}

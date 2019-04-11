@@ -6,7 +6,10 @@ block body-main__Content
       .banner__crumbs
         +crumbs()
       .banner__heading
-        h1.banner__headline= $pageHeading
+        h1(class=[
+          setModifiers('s-heading-1', ['light']),
+          'banner__headline',
+        ])= $pageHeading
       .banner__overlay
         .banner__overlay-text= $pageHeading
   block body-main__Content--inner

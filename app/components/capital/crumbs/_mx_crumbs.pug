@@ -1,7 +1,7 @@
 mixin crumbs()
   - const modifier = attributes['is-itemed'] ? 'itemed' : 'inner';
   div(class=setModifiers('crumbs', [modifier]))
-    ul.crumbs__list
+    ul.s-list.crumbs__list
       li.crumbs__item
         a.crumbs__link(href='index.html') Главная
       li.crumbs__item

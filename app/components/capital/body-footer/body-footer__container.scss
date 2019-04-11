@@ -1,10 +1,9 @@
 .#{$this}__container {
+  padding-bottom: 16px;
   background-image: url("../img/#{$this}__container-Background-1.svg");
-  background-position: 50% 100%;
+  background-position: calc(50% - 160px) 100%;
   background-size: auto 118px;
   background-repeat: no-repeat;
-
-  @include outline(blue);
 
   // @include media-breakpoint-from(lg) {
   //   background-image:
