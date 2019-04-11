@@ -1,0 +1,19 @@
+mixin advantages()
+  .advantages
+    .s-container.advantages__container
+      h2.s-visually-hidden.advantages__heading Наши преимущества
+      ul.s-list.advantages__list
+        -
+          const _ADVANTAGES_LIST = [
+            ['production', 'Собственное производство'],
+            ['products', 'Родные продукты'],
+            ['quality', 'Контроль качества'],
+            ['coffee', 'Кофейня в каждом магазине'],
+          ];
+        each item, index in _ADVANTAGES_LIST
+          - const [modifier, caption] = item;
+          li(class=setModifiers('advantages__item', [index + 1]))
+            div(class=setModifiers('advantages-item', [modifier]))
+              .advantages-item__content
+                h3.s-heading-2.advantages-item__caption= caption
+                p.s-paragraph.advantages-item__paragraph С другой стороны консультация с широким активом способствует подготовки и реализации форм.

@@ -1,0 +1,12 @@
+.#{$this} {
+  padding-top: 76px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @each $modifier, $color in $_icons {
+    &--#{$modifier} {
+      background-image: url("../img/#{$this}--#{$modifier}.svg");
+      background-size: auto 67px;
+    }
+  }
+}
