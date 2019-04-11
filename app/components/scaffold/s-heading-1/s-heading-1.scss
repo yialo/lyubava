@@ -1,5 +1,5 @@
 .#{$this} {
-  @include heading(32px);
+  @include heading(32px, 38px);
 
   &--dark {
     color: #332e27;

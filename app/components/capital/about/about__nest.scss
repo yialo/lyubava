@@ -1,0 +1,8 @@
+.#{$this}__nest {
+  &--text {
+    @include margin-hor(20px);
+    padding-top: 18px;
+    padding-bottom: 30px;
+    background-color: #f4f4f4;
+  }
+}
