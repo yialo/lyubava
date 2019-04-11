@@ -1,7 +1,7 @@
 .#{$this}__container {
   @include padding-hor(20px);
   background-image: url("../img/#{$this}__container.svg");
-  background-position: -20px 0;
+  background-position: 0 0;
   background-size: auto 85px;
   background-repeat: no-repeat;
 

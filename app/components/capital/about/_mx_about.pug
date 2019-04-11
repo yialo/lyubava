@@ -12,6 +12,7 @@ mixin about()
               ext='jpg',
               media-set=[495],
             )
-            span.about__video-string Смотреть видео
+            span.about__overlay
+              span.about__video-string Смотреть видео
           .about__target-link
             +arrow-link(href='about.html'): | Подробнее

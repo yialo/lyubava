@@ -1,0 +1,16 @@
+.#{$this}__video-string {
+  $_icon-width: 48px;
+
+  margin-top: 96px;
+  padding-top: $_icon-width + 16px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "harmonia_sans_pro_cyr", "Arial", sans-serif;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: white;
+  background-image: url("../img/#{$this}__video-string.svg");
+  background-position: top;
+  background-size: $_icon-width $_icon-width;
+  background-repeat: no-repeat;
+}
