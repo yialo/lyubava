@@ -1,3 +1,2 @@
 $this: "body-header";
-
-$js-hook: "is-menu-visible";
+$js-hook: "is-visible_#{$this}__nest--top-menu";

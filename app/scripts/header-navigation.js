@@ -9,7 +9,7 @@ const headerCatalogButton = headerNavigation
 
 // Classnames
 
-const topCatalogMenuExpanded = 'is-menu-expanded';
+const topCatalogMenuExpanded = 'is-expanded_header-navigation__inner-nest--catalog';
 const topCatalogButtonTargetExpanded = 'is-target-expanded';
 
 // Button click handler

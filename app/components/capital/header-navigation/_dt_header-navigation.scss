@@ -1,4 +1,4 @@
 $this: "header-navigation";
+$js-hook: "is-expanded_#{$this}__inner-nest--catalog";
 
-$js-hook: "is-menu-expanded";
-$header-menu-border: 1px solid #d2d2d2;
+$_header-menu-border: 1px solid #d2d2d2;

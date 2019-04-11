@@ -13,7 +13,7 @@
     flex: 1 0 auto;
     display: none;
     margin-top: 15px;
-    border-top: $header-menu-border;
+    border-top: $_header-menu-border;
 
     .#{$js-hook} & {
       display: block;

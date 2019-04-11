@@ -7,7 +7,7 @@ const menuControl = bodyHeader.querySelector('.menu-control');
 
 // Classnames
 
-const topNavbarVisible = 'is-menu-visible';
+const topNavbarVisible = 'is-visible_body-header__nest--top-menu';
 const topNavbarButtonTargetVisible = 'is-target-visible';
 
 // Button click handler

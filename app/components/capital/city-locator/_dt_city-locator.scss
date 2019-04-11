@@ -1,3 +1,2 @@
 $this: "city-locator";
-
-$js-hook: "is-citylist-expanded";
+$js-hook: "is-visible_#{$this}__dropdown";

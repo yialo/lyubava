@@ -1,0 +1,11 @@
+.#{$this} {
+  @include heading(32px);
+
+  &--dark {
+    color: #332e27;
+  }
+
+  &--light {
+    color: white;
+  }
+}

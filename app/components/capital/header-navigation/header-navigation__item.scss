@@ -1,6 +1,6 @@
 .#{$this}__item {
   @include padding-ver(15px);
-  border-bottom: $header-menu-border;
+  border-bottom: $_header-menu-border;
 
   &--basic {
     @include padding-hor(5px);
