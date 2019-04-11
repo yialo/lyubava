@@ -1,6 +1,5 @@
 .#{$this}__list {
-  @include margin-ver(-$gutter);
+  @include margin-ver(-$_gutter);
   display: flex;
   flex-direction: column;
-  width: 224px;
 }

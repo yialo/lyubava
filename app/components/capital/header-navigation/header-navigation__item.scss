@@ -1,5 +1,5 @@
 .#{$this}__item {
-  @include padding-ver(15px);
+  @include padding-ver($_ver-shift);
   border-bottom: $_header-menu-border;
 
   &--basic {
@@ -10,8 +10,8 @@
     display: flex;
     flex-wrap: wrap;
 
-    .#{$js-hook} & {
-      padding-bottom: 8px;
-    }
+    // .#{$js-hook} & {
+    //   padding-bottom: 8px;
+    // }
   }
 }

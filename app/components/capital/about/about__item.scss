@@ -1,7 +1,7 @@
 .#{$this}__item {
-  @include padding-ver($gutter);
+  @include padding-ver($_gutter);
 
   &::before {
-    transform: translateY($gutter);
+    transform: translateY($_gutter);
   }
 }

@@ -1,5 +1,5 @@
 .#{$this}__link {
-  @include padding-ver($gutter);
+  @include padding-ver($_gutter);
   position: relative;
   display: block;
   padding-left: 40px;
