@@ -1,0 +1,20 @@
+mixin catalog()
+  .catalog
+    .s-container.catalog__container
+      block
+      .catalog__content
+        ul.s-list.catalog__list
+          include _dt_catalog.pug
+          each item, index in _MAIN_CATALOG_LIST
+            - const [modifier, text, path, mediaSet] = item;
+            li(class=setModifiers('catalog__item', [index + 1]))
+              div(class=setModifiers('catalog-item', [modifier]))
+                a.catalog-item__link(href=path)
+                  +s-picture().catalog-item__picture(
+                    alt=text,
+                    path=`catalog-item__image--${modifier}`,
+                    ext='jpg',
+                    media-set=mediaSet,
+                  )
+                  h3.catalog-item__caption
+                    .catalog-item__string= text

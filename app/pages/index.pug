@@ -11,13 +11,11 @@ block body-main__Content
   section(class=setModifiers('body-main__nest', ['advantages']))
     +advantages()
   section(class=setModifiers('body-main__nest', ['catalog']))
-    .catalog
-      .s-container.catalog__container
-        .catalog__headline
-          h2.s-heading-1.catalog__heading В нашем магазине
-          .catalog__target-link
-            +arrow-link()(href='catalog.html'): | Перейти в каталог
-        +catalog__content()
+    +catalog()
+      .catalog__headline
+        h2.s-heading-1.catalog__heading В нашем магазине
+      .catalog__target-link
+        +arrow-link()(href='catalog.html'): | Перейти в каталог
   section(class=setModifiers('body-main__nest', ['recipes']))
 
   section(class=setModifiers('body-main__nest', ['news-preview']))

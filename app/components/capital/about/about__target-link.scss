@@ -1,4 +1,3 @@
 .#{$this}__target-link {
-  padding-left: 12px;
-  padding-right: 6px;
+  @include padding-hor(12px);
 }

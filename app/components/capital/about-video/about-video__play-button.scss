@@ -1,4 +1,4 @@
-.#{$this}__video-string {
+.#{$this}__play-button {
   $_icon-width: 48px;
 
   margin-top: 96px;
@@ -9,7 +9,7 @@
   letter-spacing: 0.08em;
   text-align: center;
   color: white;
-  background-image: url("../img/#{$this}__video-string.svg");
+  background-image: url("../img/#{$this}__play-button.svg");
   background-position: top;
   background-size: $_icon-width $_icon-width;
   background-repeat: no-repeat;

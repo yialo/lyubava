@@ -1,0 +1,12 @@
+mixin about-video
+  - const { class: classNames } = attributes
+  .about-video(class=classNames)
+    a.about-video__link(href='#')
+      +s-picture().about-video__picture(
+        alt='Видеоролик о нашей компании',
+        path='about__image',
+        ext='jpg',
+        media-set=[495],
+      )
+      span.about-video__overlay
+        span.about-video__play-button Смотреть видео

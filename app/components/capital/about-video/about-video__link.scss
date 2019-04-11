@@ -1,7 +1,6 @@
-.#{$this}__video-link {
+.#{$this}__link {
   @include size(348px, 246px);
   @include margin-hor(auto);
   position: relative;
   display: block;
-  margin-bottom: 23px;
 }
