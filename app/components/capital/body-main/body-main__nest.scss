@@ -10,4 +10,10 @@
   &--advantages {
     margin-bottom: 45px;
   }
+
+  &--catalog {
+    .#{$this}--index & {
+      margin-bottom: 45px;
+    }
+  }
 }

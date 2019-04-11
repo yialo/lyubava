@@ -12,9 +12,9 @@ block body-main__Content
     +advantages()
   section(class=setModifiers('body-main__nest', ['catalog']))
     +catalog()
-      .catalog__headline
+      div(class=setModifiers('catalog__nest', ['headline']))
         h2.s-heading-1.catalog__heading В нашем магазине
-      .catalog__target-link
+      div(class=setModifiers('catalog__nest', ['target-link']))
         +arrow-link()(href='catalog.html'): | Перейти в каталог
   section(class=setModifiers('body-main__nest', ['recipes']))
 

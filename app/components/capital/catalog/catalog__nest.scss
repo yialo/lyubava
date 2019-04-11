@@ -1,0 +1,14 @@
+.#{$this}__nest {
+  &--headline {
+    @include padding-hor(12px);
+    margin-bottom: 24px;
+  }
+
+  &--content {
+    margin-bottom: 35px;
+  }
+
+  &--target-link {
+    order: 1;
+  }
+}

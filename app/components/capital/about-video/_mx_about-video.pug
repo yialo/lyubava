@@ -4,9 +4,9 @@ mixin about-video
     a.about-video__link(href='#')
       +s-picture().about-video__picture(
         alt='Видеоролик о нашей компании',
-        path='about__image',
+        path='about-video__image',
         ext='jpg',
-        media-set=[495],
+        media-set=[['lg', 495], 348],
       )
       span.about-video__overlay
         span.about-video__play-button Смотреть видео
