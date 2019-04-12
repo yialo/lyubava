@@ -6,23 +6,5 @@ mixin catalog()
         ul.s-list.catalog__list
           include _dt_catalog.pug
           each item, index in _MAIN_CATALOG_LIST
-            -
-              const [modifier, text, path, mediaSet] = item;
-              const [lg, sm] = mediaSet;
             li(class=setModifiers('catalog__item', [index + 1]))
-              div(class=setModifiers('catalog-item', [modifier]))
-                a.catalog-item__link(href=path)
-                  picture.s-picture.catalog-item__picture
-                    source(
-                      media='(min-width: 992px)',
-                      srcset=`img/catalog-item__image--${modifier}@${lg}.jpg`,
-                    )
-                    img.s-picture__image(
-                      src=`img/catalog-item__image--${modifier}@${sm}.jpg`,
-                      alt=text,
-                    )
-                  h3(class=[
-                    setModifiers('s-heading-2', ['light']),
-                    'catalog-item__caption',
-                  ])
-                    span.catalog-item__string= text
+              +catalog-item()(picture=item)
