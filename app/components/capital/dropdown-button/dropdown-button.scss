@@ -1,5 +1,6 @@
 .#{$this} {
   @include size(21px, 12px);
+  display: block;
   padding: 0;
   background-color: transparent;
   background-image: url("../img/#{$this}_Down.svg");
