@@ -1,5 +1,5 @@
 mixin appendix__nest()
-  - const modifier = attributes.modifier;
+  - const { modifier } = attributes;
   div(class=setModifiers('appendix__nest', [modifier]))
     block
 mixin appendix__item()

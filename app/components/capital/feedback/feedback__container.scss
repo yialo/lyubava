@@ -1,0 +1,7 @@
+.#{$this}__container {
+  @include media-breakpoint-to(lg) {
+    @include margin-hor(auto);
+    @include padding-hor(20px);
+    width: $page-min-width;
+  }
+}

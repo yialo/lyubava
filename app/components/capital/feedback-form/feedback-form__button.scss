@@ -1,0 +1,11 @@
+.#{$this}__button {
+  @include size(48px);
+  flex-shrink: 0;
+  padding: 0;
+  background-color: $color-green;
+  border-style: none;
+  background-image: url("../img/#{$this}__button.svg");
+  background-position: center;
+  background-size: 24px 22px;
+  background-repeat: no-repeat;
+}

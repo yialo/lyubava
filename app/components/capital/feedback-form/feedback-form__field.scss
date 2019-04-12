@@ -1,0 +1,10 @@
+.#{$this}__field {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: block;
+  background-color: white;
+  background-image: url("../img/#{$this}__field.svg");
+  background-position: calc(100% - 14px) center;
+  background-size: 3px 16px;
+  background-repeat: no-repeat;
+}

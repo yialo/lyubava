@@ -1,0 +1,14 @@
+mixin feedback-form()
+  form.feedback-form(
+    action=$FORM_DEFAULT_ACTION,
+    method='POST',
+    name='feedback-data',
+  )
+    label.feedback-form__field(aria-label='Выберите категорию')
+      input.feedback-form__input(
+        type='text',
+        name='feedbackField',
+        placeholder='Выберите нужную категорию',
+        readonly,
+      )
+    button.feedback-form__button(type='submit', aria-label='Отправить')

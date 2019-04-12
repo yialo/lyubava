@@ -2,7 +2,7 @@
   .s-container.body-footer__container
     .body-footer__grid
       mixin body-footer__nest()
-        - const modifier = attributes.modifier;
+        - const { modifier } = attributes;
         div(class=setModifiers('body-footer__nest', [modifier]))
           block
 

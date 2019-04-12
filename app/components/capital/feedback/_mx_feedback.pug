@@ -1,0 +1,12 @@
+mixin feedback()
+  - const { 'is-brief': isBrief } = attributes;
+  .feedback(class=(isBrief ? 'feedback--brief' : 'feedback--verbose'))
+    .feedback__container
+      .feedback__grid
+        div(class=setModifiers('feedback__nest', ['caption']))
+          p.feedback__caption Свяжитесь с нами
+        div(class=setModifiers('feedback__nest', ['form']))
+          +feedback-form()
+        if !isBrief
+          div(class=setModifiers('feedback__nest', ['tel']))
+            +tel()(modifier='small')

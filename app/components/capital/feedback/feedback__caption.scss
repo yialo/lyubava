@@ -1,0 +1,7 @@
+.#{$this}__caption {
+  @include margin-ver(0);
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  color: $color-green;
+}

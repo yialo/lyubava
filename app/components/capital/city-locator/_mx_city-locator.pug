@@ -1,17 +1,22 @@
 mixin city-locator()
   .city-locator
-    label.city-locator__field
-      input.city-locator__input(
-        type='text',
-        name='userLocation',
-        value='Москва',
-        readonly,
-      )
-    .city-locator__dropdown
-      ul.s-list.city-locator__list
-        each city, index in $CITIES
-          li(class=[
-            'city-locator__item',
-            index === $CITIES.length - 1 ? 'city-locator__item--last' : null,
-          ])
-            a.city-locator__link(href='#')= city
+    form.city-locator__form(
+      action=$FORM_DEFAULT_ACTION,
+      method='POST',
+      name='city-data',
+    )
+      label.city-locator__field(aria-label='Выберите Ваш город')
+        input.city-locator__input(
+          type='text',
+          name='userLocation',
+          value='Москва',
+          readonly,
+        )
+      .city-locator__dropdown
+        ul.s-list.city-locator__list
+          each city, index in $CITIES
+            li(class=[
+              'city-locator__item',
+              index === $CITIES.length - 1 ? 'city-locator__item--last' : null,
+            ])
+              a.city-locator__link(href='#')= city

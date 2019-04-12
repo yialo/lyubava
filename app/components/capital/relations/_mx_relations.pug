@@ -1,8 +1,8 @@
 mixin relations()
-  - const modifier = attributes.modifier;
+  - const { modifier } = attributes;
   div(class=setModifiers('relations', [modifier]))
     block
 mixin relations__nest()
-  - const modifier = attributes.modifier;
+  - const { modifier } = attributes;
   div(class=setModifiers('relations__nest', [modifier]))
     block
