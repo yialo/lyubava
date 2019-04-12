@@ -1,0 +1,13 @@
+.#{$this}__dropdown {
+  display: block;
+  padding: 16px var(--g_footer-hor-shift);
+  background-image: url("../img/Dropdown-arrow_Down.svg");
+  background-position: calc(100% - var(--g_footer-hor-shift)) 50%;
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #c8c8c8;
+
+  .#{$js-hook} & {
+    background-image: url("../img/Dropdown-arrow_Up.svg");
+  }
+}

@@ -1,6 +1,6 @@
 .#{$this}__nest {
   &--auxiliary {
+    @include padding-hor(var(--g_footer-hor-shift));
     margin-bottom: 68px;
-    padding-left: 12px;
   }
 }

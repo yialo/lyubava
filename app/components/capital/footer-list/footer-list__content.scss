@@ -1,3 +1,13 @@
 .#{$this}__content {
-  margin-top: 36px;
+  --#{$this}__content-vertical-shift: 24px;
+
+  @include padding-hor(var(--g_footer-hor-shift));
+  display: none;
+  margin-top: var(--#{$this}__content-vertical-shift);
+  padding-bottom: var(--#{$this}__content-vertical-shift);
+  border-bottom: 1px solid #c8c8c8;
+
+  .#{$js-hook} & {
+    display: block;
+  }
 }

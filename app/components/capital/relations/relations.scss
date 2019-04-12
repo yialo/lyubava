@@ -1,5 +1,5 @@
 .#{$this} {
   &--short {
-    @include padding-hor(10px);
+    @include padding-hor(var(--g_footer-hor-shift));
   }
 }

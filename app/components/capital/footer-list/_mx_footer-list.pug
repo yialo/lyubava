@@ -1,0 +1,17 @@
+mixin footer-list()
+  - const { modifier } = attributes;
+  div(class=setModifiers('footer-list', [modifier]))
+    block
+mixin footer-list__dropdown()
+  - const { href } = attributes;
+  a.footer-list__dropdown(href=href)
+    h3.footer-list__caption
+      block
+mixin footer-list__content()
+  .footer-list__content
+    ul.s-list.footer-list__items
+      block
+mixin footer-list__item()
+  - const { path, text } = attributes;
+  li.footer-list__item
+    a.footer-list__link(href=path)= text

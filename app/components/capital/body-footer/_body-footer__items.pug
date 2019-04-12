@@ -2,30 +2,20 @@ ul.s-list.body-footer__items
   mixin body-footer__item()
     - const { enumerator, modifier } = attributes;
     li(class=setModifiers('body-footer__item', [enumerator]))
-      div(class=setModifiers('footer-list', [modifier]))
+      +footer-list()(modifier=modifier)
         block
-  mixin footer-list__caption()
-    h3.footer-list__caption
-      block
-  mixin footer-list__content()
-    .footer-list__content
-      ul.s-list.footer-list__items
-        block
-  mixin footer-list__item()
-    - const { path, text } = attributes;
-    li.footer-list__item
-      a.footer-list__link(href=path)= text
-
   include _dt_body-footer.pug
 
-  +body-footer__item()(number='1', modifier='catalog')
-    +footer-list__caption()| Товары
+  +body-footer__item()(enumerator='1', modifier='catalog')
+    - const isOnCatalogPage = ($pageId === 'catalog');
+    +footer-list__dropdown(href=(isOnCatalogPage ? '#' : 'catalog.html'))
+      | Товары
     +footer-list__content()
       each item in _FOOTER_CATALOG_LIST
         - const [text, path] = item;
         +footer-list__item(path=path, text=text)
-  +body-footer__item()(number='2', modifier='navigation')
-    +footer-list__caption()
+  +body-footer__item()(enumerator='2', modifier='navigation')
+    +footer-list__dropdown(href='#')
       each item in [['narrow', 'Карта сайта'], ['wide', 'Навигация']]
         - const [submodifier, legend] = item;
         span(class=setModifiers(
