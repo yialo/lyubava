@@ -1,4 +1,4 @@
 mixin arrow-link()
-  - const href = attributes.href;
-  p.arrow-link
+  - const { class: classnames, href } = attributes;
+  p.arrow-link(class=classnames)
     a.arrow-link__agent(href=href): block

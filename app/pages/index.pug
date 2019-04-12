@@ -4,21 +4,24 @@ block page-id
   - const $pageId = 'index';
 
 block body-main__Content
-  header(class=setModifiers('body-main__nest', ['promo']))
+  +body-main__nest()(modifier='promo', type='header')
     .promo
-  section(class=setModifiers('body-main__nest', ['about']))
+  +body-main__nest()(modifier='about')
     +about()
-  section(class=setModifiers('body-main__nest', ['advantages']))
+  +body-main__nest()(modifier='advantages')
     +advantages()
-  section(class=setModifiers('body-main__nest', ['catalog']))
+  +body-main__nest()(modifier='catalog')
     +catalog()
       div(class=setModifiers('catalog__nest', ['headline']))
         h2.s-heading-1.catalog__heading В нашем магазине
       div(class=setModifiers('catalog__nest', ['target-link']))
         +arrow-link()(href='catalog.html'): | Перейти в каталог
-  section(class=setModifiers('body-main__nest', ['recipes']))
+  +body-main__nest()(modifier='recipes')
 
-  section(class=setModifiers('body-main__nest', ['news-preview']))
+  +body-main__nest()(modifier='multicolumn', type='div')
+    section(class=setModifiers('body-main__subnest', ['news-preview']))
+      +news-preview()
+    aside(class=setModifiers('body-main__subnest', ['feedback']))
 
-  section(class=setModifiers('body-main__nest', ['shops']))
+  +body-main__nest()(modifier='shops')
     +shops()

@@ -1,0 +1,13 @@
+mixin body-main__nest()
+  - const { modifier, type } = attributes;
+  case type
+    when 'header'
+      header(class=setModifiers('body-main__nest', [modifier]))
+        block
+    when 'div'
+      div(class=setModifiers('body-main__nest', [modifier]))
+        block
+    when 'section'
+    default
+      section(class=setModifiers('body-main__nest', [modifier]))
+        block
