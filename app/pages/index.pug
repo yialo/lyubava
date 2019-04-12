@@ -4,7 +4,7 @@ block page-id
   - const $pageId = 'index';
 
 block body-main__Content
-  +body-main__nest()(modifier='promo', type='header')
+  +body-main__nest()(modifier='promo', tag='header')
     .promo
   +body-main__nest()(modifier='about')
     +about()
@@ -18,7 +18,7 @@ block body-main__Content
         +arrow-link()(href='catalog.html'): | Перейти в каталог
   +body-main__nest()(modifier='recipes')
 
-  +body-main__nest()(modifier='multicolumn', type='div')
+  +body-main__nest()(modifier='multicolumn', tag='div')
     section(class=setModifiers('body-main__subnest', ['news-preview']))
       +news-preview()
     aside(class=setModifiers('body-main__subnest', ['feedback']))
