@@ -1,30 +1,44 @@
 ul.s-list.body-footer__items
+  mixin body-footer__item()
+    - const { enumerator, modifier } = attributes;
+    li(class=setModifiers('body-footer__item', [enumerator]))
+      div(class=setModifiers('footer-list', [modifier]))
+        block
+  mixin footer-list__caption()
+    h3.footer-list__caption
+      block
+  mixin footer-list__content()
+    .footer-list__content
+      ul.s-list.footer-list__items
+        block
+  mixin footer-list__item()
+    - const { path, text } = attributes;
+    li.footer-list__item
+      a.footer-list__link(href=path)= text
+
   include _dt_body-footer.pug
-  li(class=setModifiers('body-footer__item', [1]))
-    div(class=setModifiers('footer-list', ['catalog']))
-      h3.footer-list__caption= 'Товары'
-      .footer-list__content
-        ul.s-list.footer-list__items
-          each item in _FOOTER_CATALOG_LIST
-            - const [text, path] = item;
-            li.footer-list__item
-              a.footer-list__link(href=path)= text
-  li(class=setModifiers('body-footer__item', [2]))
-    div(class=setModifiers('footer-list', ['navigation']))
-      h3.footer-list__caption
-        span(class=setModifiers('footer-list__legend', ['viewport_narrow']))
-          | Карта сайта
-        span(class=setModifiers('footer-list__legend', ['viewport_wide']))
-          | Навигация
-      .footer-list__content
-        ul.s-list.footer-list__items
-          each item in _FOOTER_NAVIGATION_LIST
-            -
-              const [text, target] = item;
-              let path = `${target}.html`;
-            if target === $pageId
-              - path = null;
-            else if $EMPTY_PATHS.includes(target)
-              - path = '#';
-            li.footer-list__item
-              a.footer-list__link(href=path)= text
+
+  +body-footer__item()(number='1', modifier='catalog')
+    +footer-list__caption()| Товары
+    +footer-list__content()
+      each item in _FOOTER_CATALOG_LIST
+        - const [text, path] = item;
+        +footer-list__item(path=path, text=text)
+  +body-footer__item()(number='2', modifier='navigation')
+    +footer-list__caption()
+      each item in [['narrow', 'Карта сайта'], ['wide', 'Навигация']]
+        - const [submodifier, legend] = item;
+        span(class=setModifiers(
+          'footer-list__legend',
+          [`viewport_${submodifier}`])
+        )= legend
+    +footer-list__content()
+      each item in _FOOTER_NAVIGATION_LIST
+        -
+          const [text, target] = item;
+          let path = `${target}.html`;
+        if target === $pageId
+          - path = null;
+        else if $EMPTY_PATHS.includes(target)
+          - path = '#';
+        +footer-list__item(path=path, text=text)

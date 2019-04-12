@@ -1,0 +1,8 @@
+mixin relations()
+  - const modifier = attributes.modifier;
+  div(class=setModifiers('relations', [modifier]))
+    block
+mixin relations__nest()
+  - const modifier = attributes.modifier;
+  div(class=setModifiers('relations__nest', [modifier]))
+    block

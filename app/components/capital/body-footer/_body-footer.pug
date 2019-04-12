@@ -1,23 +1,30 @@
 .body-footer
   .s-container.body-footer__container
     .body-footer__grid
-      div(class=setModifiers('body-footer__nest', ['listing']))
+      mixin body-footer__nest()
+        - const modifier = attributes.modifier;
+        div(class=setModifiers('body-footer__nest', [modifier]))
+          block
+
+      +body-footer__nest()(modifier='listing')
         include _body-footer__items.pug
-      div(class=setModifiers('body-footer__nest', ['relations']))
-        div(class=setModifiers('relations', ['short']))
-          div(class=setModifiers('relations__nest', ['tel']))
+      +body-footer__nest()(modifier='relations')
+        +relations()(modifier='short')
+          +relations__nest()(modifier='tel')
             +tel()(modifier='small')
-          div(class=setModifiers('relations__nest', ['socials']))
+          +relations__nest()(modifier='socials')
             +socials()
-      div(class=setModifiers('body-footer__nest', ['appendix']))
+      +body-footer__nest()(modifier='appendix')
         .appendix
-          div(class=setModifiers('appendix__nest', ['auxiliary']))
-            p(class=setModifiers('appendix__item', ['privacy-policy']))
-              a.appendix__link(href='#') Политика конфиденциальности
-            p(class=setModifiers('appendix__item', ['creator']))
-              a.appendix__link(
-                href='https://www.waytostart.ru/',
-                target='_blank',
-              ) Создание сайтов #[span.appendix__string= 'WayToStart']
-          div(class=setModifiers('appendix__nest', ['logo']))
+          +appendix__nest()(modifier='auxiliary')
+            +appendix__item()(
+              modifier='privacy-policy',
+              href='#',
+            )| Политика конфиденциальности
+            +appendix__item()(
+              modifier='creator',
+              href='https://www.waytostart.ru/',
+              target='_blank',
+            )| Создание сайтов #[span.appendix__string= 'WayToStart']
+          +appendix__nest()(modifier='logo')
             +logo()(location='footer')

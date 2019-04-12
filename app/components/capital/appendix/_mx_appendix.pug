@@ -1,0 +1,12 @@
+mixin appendix__nest()
+  - const modifier = attributes.modifier;
+  div(class=setModifiers('appendix__nest', [modifier]))
+    block
+mixin appendix__item()
+  - const { modifier, href, target=null } = attributes;
+  p(class=setModifiers('appendix__item', [modifier]))
+    a.appendix__link(
+      href=href,
+      target=target,
+    )
+      block
