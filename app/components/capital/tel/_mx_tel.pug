@@ -1,4 +1,4 @@
 mixin tel()
-  - const { modifier, class: classnames } = attributes;
+  - const { modifier='small', class: classnames } = attributes;
   div(class=[setModifiers('tel', [modifier]), classnames])
     a.tel__link(href='tel:+78005115491')= '8-800-511-54-91'
