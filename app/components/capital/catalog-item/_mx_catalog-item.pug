@@ -10,7 +10,7 @@ mixin catalog-item()
           media='(min-width: 992px)',
           srcset=`img/catalog-item__image--${modifier}@${lg}.jpg`,
         )
-        img.s-picture__image(
+        img.s-picture__image.catalog-item__image(
           src=`img/catalog-item__image--${modifier}@${sm}.jpg`,
           alt=text,
         )
