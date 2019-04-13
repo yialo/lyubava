@@ -1,22 +1,20 @@
 .body-footer
   .s-container.body-footer__container
     .body-footer__grid
-      mixin body-footer__nest()
-        - const { modifier } = attributes;
-        div(class=setModifiers('body-footer__nest', [modifier]))
+      mixin body-footer__nest(modifier)
+        +nest(parent='body-footer', modifier=modifier)
           block
-
-      +body-footer__nest()(modifier='listing')
+      +body-footer__nest('listing')
         include _body-footer__items.pug
-      +body-footer__nest()(modifier='relations')
+      +body-footer__nest('relations')
         +relations()(modifier='short')
-          +relations__nest()(modifier='tel')
+          +relations__nest('tel')
             +tel()
-          +relations__nest()(modifier='socials')
+          +relations__nest('socials')
             +socials()
-      +body-footer__nest()(modifier='appendix')
+      +body-footer__nest('appendix')
         .appendix
-          +appendix__nest()(modifier='auxiliary')
+          +appendix__nest('auxiliary')
             +appendix__item()(
               modifier='privacy-policy',
               href='#',
@@ -26,5 +24,5 @@
               href='https://www.waytostart.ru/',
               target='_blank',
             )| Создание сайтов #[span.appendix__string= 'WayToStart']
-          +appendix__nest()(modifier='logo')
+          +appendix__nest('logo')
             +logo()(location='footer')
