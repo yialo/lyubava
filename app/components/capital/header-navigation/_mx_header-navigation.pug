@@ -1,12 +1,19 @@
 mixin header-navigation()
+  mixin header-navigation__item(modifier)
+    li(class=setModifiers('header-navigation__item', [modifier]))
+      block
+  mixin header-navigation__inner-nest(modifier)
+    div(class=setModifiers('header-navigation__inner-nest', [modifier]))
+      block
+
   .header-navigation
     ul.s-list.header-navigation__list
       -
         const _HEADER_NAVIGATION_LIST = [
           ['Каталог', 'catalog'],
-          ['Магазины', 'shops'],
-          ['Контакты', 'contacts'],
           ['О нас', 'about'],
+          ['Контакты', 'contacts'],
+          ['Магазины', 'shops'],
         ];
       each item in _HEADER_NAVIGATION_LIST
         -
@@ -17,16 +24,16 @@ mixin header-navigation()
         else if $EMPTY_PATHS.includes(target)
           - path = '#';
         if target === 'catalog'
-          li(class=setModifiers('header-navigation__item', ['catalog']))
-            div(class=setModifiers('header-navigation__inner-nest', ['link']))
+          +header-navigation__item('catalog')
+            +header-navigation__inner-nest('link')
               a(
                 class=setModifiers('header-navigation__link', ['green']),
                 href=path,
               )= text
-            div(class=setModifiers('header-navigation__inner-nest', ['button']))
+            +header-navigation__inner-nest('button')
               +dropdown-button()(classnames='header-navigation__button')
-            div(class=setModifiers('header-navigation__inner-nest', ['catalog']))
+            +header-navigation__inner-nest('catalog')
               +header-catalog()
         else
-          li(class=setModifiers('header-navigation__item', ['basic']))
+          +header-navigation__item('basic')
             a.header-navigation__link(href=path)= text

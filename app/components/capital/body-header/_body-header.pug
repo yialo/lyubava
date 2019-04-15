@@ -1,20 +1,12 @@
 .body-header
   .s-container.body-header__container
     .body-header__grid
-      div(class=setModifiers('body-header__nest', ['logo']))
+      mixin body-header__nest(modifier)
+        +nest()(parent='body-header', modifier=modifier)
+          block
+      +body-header__nest('logo')
         +logo()(location='header')
-      div(class=setModifiers('body-header__nest', ['menu-control']))
+      +body-header__nest('menu-control')
         +menu-control()
-      div(class=setModifiers('body-header__nest', ['top-menu']))
-        div(class=setModifiers('top-menu', ['narrow-popup', 'wide-line']))
-          .top-menu__grid
-            nav(class=setModifiers('top-menu__nest', ['header-navigation']))
-              +header-navigation()
-            div(class=setModifiers('top-menu__nest', ['contacts-line']))
-              .contacts-line
-                div(class=setModifiers('contacts-line__nest', ['tel']))
-                  +tel()
-                div(class=setModifiers('contacts-line__nest', ['city']))
-                  +city-locator()
-            div(class=setModifiers('top-menu__nest', ['user']))
-              +user()
+      +body-header__nest('top-menu')
+        +top-menu()

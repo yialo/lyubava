@@ -1,0 +1,9 @@
+mixin top-menu()
+  div(class=setModifiers('top-menu', ['narrow-popup', 'wide-line']))
+    .top-menu__grid
+      nav(class=setModifiers('top-menu__nest', ['header-navigation']))
+        +header-navigation()
+      div(class=setModifiers('top-menu__nest', ['contacts-line']))
+        +contacts-line()
+      div(class=setModifiers('top-menu__nest', ['user']))
+        +user()
