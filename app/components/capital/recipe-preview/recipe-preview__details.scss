@@ -4,7 +4,7 @@
   @include margin-ver(0);
   @include padding-ver(7px);
   padding-left: $_icon-width + 7px;
-  color: #999999;
+  color: $color-gray-medium;
   background-image: url("../img/#{$this}__details.svg");
   background-position: left;
   background-size: $_icon-width 21px;

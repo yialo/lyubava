@@ -1,0 +1,7 @@
+.#{$this}__details {
+  @include margin-ver(0);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: $color-gray-medium;
+}
