@@ -12,12 +12,16 @@ block body-main__Content
     +advantages()
   +body-main__nest()(modifier='catalog')
     +catalog()
-      div(class=setModifiers('catalog__nest', ['headline']))
+      +nest()(parent='catalog', modifier='headline')
         h2.s-heading-1.catalog__heading В нашем магазине
-      div(class=setModifiers('catalog__nest', ['target-link']))
+      +nest()(parent='catalog', modifier='target-link')
         +arrow-link()(href='catalog.html'): | Перейти в каталог
   +body-main__nest()(modifier='recipes')
     +recipes()
+      +nest()(parent='recipes', modifier='headline')
+        h2.s-heading-1.recipes__heading Вдохновляющие идеи рецептов
+      +nest()(parent='recipes', modifier='target-link')
+        +arrow-link()(href='recipes.html'): | Перейти к рецептам
   +body-main__nest()(modifier='multicolumn', tag='div')
     section(class=setModifiers('body-main__subnest', ['news-preview']))
       +news-preview()

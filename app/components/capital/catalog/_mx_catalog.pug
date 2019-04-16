@@ -2,7 +2,7 @@ mixin catalog()
   .catalog
     .s-container.catalog__container
       block
-      div(class=setModifiers('catalog__nest', ['content']))
+      +nest()(parent='catalog', modifier='content')
         ul.s-list.catalog__list
           include _dt_catalog.pug
           each item, index in _MAIN_CATALOG_LIST

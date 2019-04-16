@@ -1,17 +1,10 @@
 mixin recipes()
-  mixin recipes__nest(modifier)
-    +nest()(parent='recipes', modifier=modifier)
-      block
-
   .recipes
     .s-container.recipes__container
-      +recipes__nest('headline')
-        h2.s-heading-1.recipes__heading Вдохновляющие идеи рецептов
-      +recipes__nest('content')
+      block
+      +nest()(parent='recipes', modifier='content')
         ul.s-list.recipes__list
           - const _PRICES = [500, 2500, 500];
           each price, i in _PRICES
             li.recipes__item
               +recipe-preview()(enumerator= i + 1, price=price)
-      +recipes__nest('target-link')
-        +arrow-link()(href='recipes.html'): | Перейти к рецептам
