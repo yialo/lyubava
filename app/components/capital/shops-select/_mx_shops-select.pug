@@ -1,6 +1,7 @@
 mixin shops-select()
   .shops-select
     .shops-select__dropdown
+      +city-locator()(modifier='body')
     .shops-select__scroller
       ul.s-list.shops-select__list
         - for(let i = 1; i <= 3; i += 1)

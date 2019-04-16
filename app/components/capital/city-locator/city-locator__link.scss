@@ -1,7 +1,14 @@
 .#{$this}__link {
   display: block;
   overflow: hidden;
-  padding: 14px 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  .#{$this}--header & {
+    padding: 14px 20px;
+  }
+
+  .#{$this}--body & {
+    padding: 18px 10px;
+  }
 }

@@ -1,11 +1,14 @@
 .#{$this}__dropdown {
-  @include padding-hor(8px);
   position: absolute;
   z-index: 1;
   display: none;
   width: 100%;
-  background-color: white;
-  border: 1px solid #d6d6d6;
+
+  .#{$this}--header & {
+    @include padding-hor(8px);
+    background-color: white;
+    border: 1px solid #d6d6d6;
+  }
 
   .#{$js-hook} & {
     display: block;

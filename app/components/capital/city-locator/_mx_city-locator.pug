@@ -1,5 +1,6 @@
 mixin city-locator()
-  .city-locator
+  - const { modifier } = attributes;
+  div(class=setModifiers('city-locator', [modifier]))
     form.city-locator__form(
       action=$FORM_DEFAULT_ACTION,
       method='POST',

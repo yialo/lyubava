@@ -1,9 +1,11 @@
 .#{$this}__item {
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  border-bottom: 1px solid #d4d4d4;
+  .#{$this}--header & {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #d4d4d4;
 
-  &--last {
-    border-bottom-style: none;
+    &--last {
+      border-bottom-style: none;
+    }
   }
 }
