@@ -1,0 +1,7 @@
+.#{$this} {
+  @include padding-hor(30px);
+  background-image: url("../img/#{$this}@360.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

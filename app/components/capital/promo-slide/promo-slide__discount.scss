@@ -1,0 +1,24 @@
+.#{$this}__discount {
+  @include size(90px);
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: -32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: white;
+  border-radius: 50%;
+
+  &::before {
+    @include size(100%);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 11px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: inherit;
+  }
+}

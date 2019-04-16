@@ -1,0 +1,4 @@
+.#{$this}__container {
+  @include margin-hor(auto);
+  max-width: $page-min-width;
+}
