@@ -3,4 +3,8 @@
   @include margin-hor(auto);
   position: relative;
   display: block;
+
+  @include media-breakpoint-from(xl) {
+    @include size(495px, 350px);
+  }
 }

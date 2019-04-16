@@ -1,0 +1,7 @@
+.#{$this}__grid {
+  @include media-breakpoint-from(xl) {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 100px auto;
+  }
+}

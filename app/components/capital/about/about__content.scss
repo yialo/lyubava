@@ -1,3 +1,7 @@
 .#{$this}__content {
   @include padding-hor(20px);
+
+  @include media-breakpoint-from(xl) {
+    @include padding-hor(0);
+  }
 }

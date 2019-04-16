@@ -1,4 +1,9 @@
 .#{$this}__heading {
   @include padding-hor(10px);
   margin-bottom: 12px;
+
+  @include media-breakpoint-from(xl) {
+    @include padding-hor(0);
+    margin-bottom: 24px;
+  }
 }

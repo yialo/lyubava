@@ -33,4 +33,17 @@
       margin-bottom: 54px;
     }
   }
+
+  @include media-breakpoint-from(xl) {
+    &--hoister {
+      position: fixed;
+      z-index: 2;
+      right: 20px;
+      display: block;
+    }
+
+    &--promo {
+      margin-bottom: 56px;
+    }
+  }
 }

@@ -1,4 +1,10 @@
 .#{$this}__container {
   @include padding-hor(0);
   padding-top: 30px;
+
+  @include media-breakpoint-from(xl) {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 100px;
+  }
 }
