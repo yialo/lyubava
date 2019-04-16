@@ -18,4 +18,10 @@
   .#{$this}--body & {
     color: white;
   }
+
+  @include media-breakpoint-from(xl) {
+    .#{$this}--header & {
+
+    }
+  }
 }
