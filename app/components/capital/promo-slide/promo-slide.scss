@@ -4,4 +4,9 @@
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include media-breakpoint-from(xl) {
+    background-image: url("../img/#{$this}@1160.jpg");
+    padding-left: 160px;
+  }
 }

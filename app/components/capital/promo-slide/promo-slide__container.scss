@@ -3,4 +3,10 @@
   width: 240px;
   min-height: 355px;
   padding-top: 38px;
+
+  @include media-breakpoint-from(xl) {
+    width: 560px;
+    min-height: 554px;
+    padding-top: 96px;
+  }
 }

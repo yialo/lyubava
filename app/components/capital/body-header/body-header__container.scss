@@ -11,8 +11,8 @@
       url("../img/#{$this}__container--Brown.svg"),
       url("../img/#{$this}__container--Gray.svg");
     background-position:
-      0 100%,
-      0 -2px,
+      0 calc(100% + 2px),
+      0 0,
       calc(100% + 120px) 0;
     background-size:
       100% auto,

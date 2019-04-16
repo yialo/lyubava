@@ -21,4 +21,16 @@
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: inherit;
   }
+
+  @include media-breakpoint-from(xl) {
+    @include size(240px);
+    top: 100px;
+    left: calc(100% + 50px);
+    right: auto;
+
+    &::before {
+      top: 1%;
+      left: 5%;
+    }
+  }
 }

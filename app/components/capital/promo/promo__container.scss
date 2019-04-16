@@ -1,4 +1,8 @@
 .#{$this}__container {
   @include margin-hor(auto);
   max-width: $page-min-width;
+
+  @include media-breakpoint-from(xl) {
+    max-width: get-breakpoint(xl) - 40px;
+  }
 }

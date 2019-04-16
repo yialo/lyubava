@@ -3,9 +3,7 @@
   cursor: pointer;
 
   .#{$this}--header & {
-    @include padding-hor(28px);
-    padding-top: 4px;
-    padding-bottom: 11px;
+    padding: 4px 42px 11px 28px;
     background-image:
       url("../img/#{$this}--header.svg"),
       url("../img/#{$this}--header__field--Arrow.svg");
@@ -34,6 +32,7 @@
     .#{$this}--header & {
       position: relative;
       padding-left: 0;
+      padding-right: 28px;
       background-image: url("../img/#{$this}--header__field--Arrow.svg");
       background-position: calc(100% - 6px) calc(100% - 13px);
       background-size: 21px 12px;

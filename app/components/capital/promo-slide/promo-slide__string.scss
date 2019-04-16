@@ -4,4 +4,12 @@
   letter-spacing: 0.02em;
   text-align: center;
   color: black;
+
+  @include media-breakpoint-from(xl) {
+    font-size: 30px;
+
+    &--inner {
+      font-size: 62px;
+    }
+  }
 }
