@@ -1,15 +1,16 @@
 @import
-  "~normalize.css",
-  "~slick-carousel/slick/slick.scss";
-
-@import
-  "../vendor_customized/*.scss";
-
-@import
   "../global/functions/*.scss",
   "../global/data/*.scss",
   "../global/methods/*.scss",
   "../global/mixins/*.scss";
+
+@import
+  "~normalize.css",
+  "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+  "~slick-carousel/slick/slick.scss";
+
+@import
+  "../vendor_customized/*.scss";
 
 @import
   "../global/styles/_fonts.scss",

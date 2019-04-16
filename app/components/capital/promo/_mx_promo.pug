@@ -6,14 +6,4 @@ mixin promo()
           - for (i = 1; i <= 5; i += 1)
             div(class=setModifiers('promo__item', [i]))
               +promo-slide()
-      .promo__controller
-        ul.s-list.promo__controls
-          - for (i = 1; i <= 5; i += 1)
-            - const isCurrent = (i === 2);
-            li.promo__control
-              button.promo__button(
-                class=(isCurrent ? 'promo__button--current' : null),
-                type='button',
-                aria-label=`Перейти к слайду №${i}`,
-                disabled=(isCurrent ? true : false),
-              )
+      .promo__controller(id='slick-dots-host')

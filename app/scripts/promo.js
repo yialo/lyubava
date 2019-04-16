@@ -2,18 +2,16 @@
 
 $(document).ready(function () {
   const slickSettings = {
-    autoplay: true,
     arrows: false,
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 1000,
+    appendDots: $('#slick-dots-host'),
+    autoplay: true,
+    dots: true,
     fade: false,
+    infinite: true,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    speed: 1000,
   };
 
   $('.promo__list').slick(slickSettings);
 });
-
-
-// TODO: append dots

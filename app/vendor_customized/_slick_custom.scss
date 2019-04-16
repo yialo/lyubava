@@ -1,0 +1,26 @@
+$_gutter-hor: 5px;
+
+.slick-dots {
+  @include list();
+  @include margin-hor(-$_gutter-hor);
+  display: flex;
+
+  li {
+    @include padding-hor($_gutter-hor);
+  }
+
+  button {
+    @include size(10px);
+    padding: 0;
+    font-size: 0;
+    background-color: white;
+    border-style: none;
+    border-radius: 50%;
+  }
+
+  .slick-active button {
+    background-color: $color-brown;
+    box-shadow: 0 0 0 2px white;
+    cursor: default;
+  }
+}
