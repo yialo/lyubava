@@ -12,17 +12,13 @@
   }
 
   @include media-breakpoint-from(xl) {
+    @include padding-ver(0);
+    @include padding-hor($_gutter-hor);
     border-bottom-style: none;
 
     &--catalog {
-      $_icon-width: 18px;
       position: relative;
       z-index: 1;
-      padding-left: $_icon-width + 17px;
-      background-image: url("../img/#{$this}__item--catalog.svg");
-      background-position: left;
-      background-size: $_icon-width 14px;
-      background-repeat: no-repeat;
     }
   }
 }

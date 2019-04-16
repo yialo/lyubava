@@ -6,6 +6,7 @@
   @include media-breakpoint-from(xl) {
     &--tel {
       display: block;
+      margin-bottom: 8px;
     }
 
     &--city {

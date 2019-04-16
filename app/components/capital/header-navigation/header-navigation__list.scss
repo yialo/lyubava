@@ -1,5 +1,6 @@
 .#{$this}__list {
   @include media-breakpoint-from(xl) {
+    @include margin-hor(-$_gutter-hor);
     display: flex;
   }
 }

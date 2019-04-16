@@ -13,4 +13,11 @@
   .#{$js-hook} & {
     display: block;
   }
+
+  @include media-breakpoint-from(xl) {
+    .#{$this}--header & {
+      left: 0;
+      width: 282px;
+    }
+  }
 }

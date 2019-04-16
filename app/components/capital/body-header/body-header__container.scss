@@ -7,15 +7,19 @@
 
   @include media-breakpoint-from(xl) {
     background-image:
-      url("../img/#{$this}__container.svg"),
-      url("../img/#{$this}__container--Additional.svg");
+      url("../img/#{$this}__container--Green.svg"),
+      url("../img/#{$this}__container--Brown.svg"),
+      url("../img/#{$this}__container--Gray.svg");
     background-position:
-      0 0,
+      0 100%,
+      0 -2px,
       calc(100% + 120px) 0;
     background-size:
+      100% auto,
       auto 100%,
       auto 120%;
     background-repeat:
+      no-repeat,
       no-repeat,
       no-repeat;
   }

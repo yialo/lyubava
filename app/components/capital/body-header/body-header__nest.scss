@@ -24,9 +24,9 @@
 
   @include media-breakpoint-from(xl) {
     &--logo {
-      margin-top: 10px;
+      margin-top: 0;
       margin-bottom: 0;
-      margin-right: 20px;
+      margin-right: 30px;
     }
 
     &--top-menu {
@@ -35,7 +35,6 @@
       flex-grow: 1;
       display: block;
       width: auto;
-      margin-top: 22px;
     }
 
     &--menu-control {

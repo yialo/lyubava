@@ -1,4 +1,15 @@
 .#{$this}__form {
   position: relative;
   z-index: 0;
+
+  @include media-breakpoint-from(xl) {
+    .#{$this}--header & {
+      z-index: 1;
+      padding-left: 28px;
+      background-image: url("../img/#{$this}--header.svg");
+      background-position: 2px calc(100% - 11px);
+      background-size: 14px 21px;
+      background-repeat: no-repeat;
+    }
+  }
 }

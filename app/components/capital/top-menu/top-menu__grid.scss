@@ -4,5 +4,6 @@
 
   @include media-breakpoint-from(xl) {
     flex-direction: row;
+    align-items: center;
   }
 }

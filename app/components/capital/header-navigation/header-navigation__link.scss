@@ -14,8 +14,13 @@
     font-size: 16px;
 
     &--green {
-      text-transform: none;
-      color: black;
+      $_icon-width: 18px;
+      padding-left: $_icon-width + 12px;
+      background-image: url("../img/#{$this}__link--green.svg");
+      background-position: 0 2px;
+      background-size: $_icon-width 14px;
+      background-repeat: no-repeat;
+      cursor: pointer;
     }
   }
 }

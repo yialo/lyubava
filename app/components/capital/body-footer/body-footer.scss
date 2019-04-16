@@ -4,8 +4,4 @@
   background-position: calc(50% - 160px) 100%;
   background-size: auto 118px;
   background-repeat: no-repeat;
-
-  @include media-breakpoint-from(lg) {
-    background-image: none;
-  }
 }

@@ -17,10 +17,12 @@
     }
 
     &--contacts-line {
+      @include margin-hor(auto);
       order: 0;
     }
 
     &--user {
+      margin-bottom: 0;
       margin-left: auto;
     }
   }
