@@ -4,6 +4,14 @@
   padding-left: 80px;
   background-image: url("../img/#{$this}__controller.svg");
   background-position: calc(50% + 150px) bottom;
-  background-size: auto 37px;
+  background-size: auto 100%;
   background-repeat: no-repeat;
+
+  @include media-breakpoint-from(xl) {
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 320px;
+    background-position: 0 0;
+    background-size: contain;
+  }
 }
