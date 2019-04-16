@@ -17,7 +17,7 @@ block body-main__Content
       div(class=setModifiers('catalog__nest', ['target-link']))
         +arrow-link()(href='catalog.html'): | Перейти в каталог
   +body-main__nest()(modifier='recipes')
-
+    +recipes()
   +body-main__nest()(modifier='multicolumn', tag='div')
     section(class=setModifiers('body-main__subnest', ['news-preview']))
       +news-preview()

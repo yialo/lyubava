@@ -1,0 +1,9 @@
+.#{$this}__string {
+  &::after {
+    content: " • ";
+  }
+
+  &--last::after {
+    content: none;
+  }
+}

@@ -1,0 +1,15 @@
+mixin recipe-preview()
+  - const { enumerator, price } = attributes;
+  .recipe-preview
+    a.recipe-preview__link(href='recipes-item.html')
+      picture.recipe-preview__picture
+        img.recipe-preview__image(
+          src=`img/recipe-preview--${enumerator}__image.jpg`,
+          alt=`Рецепт №${enumerator}`,
+        )
+      .recipe-preview__content
+        p.recipe-preview__description Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        p.recipe-preview__details
+          - const _STRINGS = ['30-40 минут', '4 порции', `На ${price}р`];
+          each string, i in _STRINGS
+            span.recipe-preview__string(class=(i + 1 === _STRINGS.length ? 'recipe-preview__string--last' : null))= string

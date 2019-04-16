@@ -1,0 +1,5 @@
+.#{$this}__picture {
+  @include size(319px, 269px);
+  @include margin-hor(auto);
+  overflow: hidden;
+}
