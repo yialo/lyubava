@@ -1,0 +1,5 @@
+.#{$this}__list {
+  @include media-breakpoint-from(xl) {
+    display: flex;
+  }
+}

@@ -4,4 +4,10 @@
   &--1 {
     margin-bottom: 26px;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--1 {
+      margin-bottom: 13px;
+    }
+  }
 }

@@ -10,4 +10,18 @@
   &--user {
     margin-bottom: 17px;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--header-navigation {
+      margin-bottom: 0;
+    }
+
+    &--contacts-line {
+      order: 0;
+    }
+
+    &--user {
+      margin-left: auto;
+    }
+  }
 }

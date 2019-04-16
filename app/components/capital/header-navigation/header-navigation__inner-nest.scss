@@ -20,4 +20,26 @@
       display: block;
     }
   }
+
+  @include media-breakpoint-from(xl) {
+    &--button {
+      display: none;
+    }
+
+    &--catalog {
+      flex: 0 0 auto;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 300px;
+      margin-top: 0;
+      padding-top: 0;
+      border-top-style: none;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+
+      .#{$this}__item--catalog:hover & {
+        display: block;
+      }
+    }
+  }
 }

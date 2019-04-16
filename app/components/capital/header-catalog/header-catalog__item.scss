@@ -1,0 +1,9 @@
+.#{$this}__item {
+  @include media-breakpoint-from(xl) {
+    border-bottom: 1px solid #d2d2d2;
+
+    &--last {
+      border-bottom-style: none;
+    }
+  }
+}

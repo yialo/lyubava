@@ -2,10 +2,21 @@
   @include padding-hor(20px);
   background-image: url("../img/#{$this}__container.svg");
   background-position: 0 0;
-  background-size: auto 85px;
+  background-size: auto 100%;
   background-repeat: no-repeat;
 
-  // @include media-breakpoint-from(lg) {
-  //   background-size: 1920px 110px;
-  // }
+  @include media-breakpoint-from(xl) {
+    background-image:
+      url("../img/#{$this}__container.svg"),
+      url("../img/#{$this}__container--Additional.svg");
+    background-position:
+      0 0,
+      calc(100% + 120px) 0;
+    background-size:
+      auto 100%,
+      auto 120%;
+    background-repeat:
+      no-repeat,
+      no-repeat;
+  }
 }

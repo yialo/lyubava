@@ -1,4 +1,8 @@
 .#{$this}__grid {
   display: flex;
   flex-direction: column;
+
+  @include media-breakpoint-from(xl) {
+    flex-direction: row;
+  }
 }

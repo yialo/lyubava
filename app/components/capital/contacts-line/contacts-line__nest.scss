@@ -2,4 +2,14 @@
   &--tel {
     display: none;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--tel {
+      display: block;
+    }
+
+    &--city {
+      width: 122px;
+    }
+  }
 }

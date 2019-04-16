@@ -21,4 +21,25 @@
   &--menu-control {
     margin-top: 22px;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--logo {
+      margin-top: 10px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    &--top-menu {
+      position: static;
+      transform: none;
+      flex-grow: 1;
+      display: block;
+      width: auto;
+      margin-top: 22px;
+    }
+
+    &--menu-control {
+      display: none;
+    }
+  }
 }

@@ -23,9 +23,9 @@ mixin header-catalog()
         };
         const _HEADER_CATALOG_LIST = getList();
 
-      each item in _HEADER_CATALOG_LIST
+      each item, i in _HEADER_CATALOG_LIST
         - const [modifier, text, path] = item;
-        li.header-catalog__item
+        li.header-catalog__item(class=(i === _HEADER_CATALOG_LIST.length - 1 ? 'header-catalog__item--last' : null))
           - const isProductsPage = ($pageId === 'products' && modifier === 'dairy');
           a(
             class=[

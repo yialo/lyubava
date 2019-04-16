@@ -38,4 +38,13 @@
     text-transform: uppercase;
     color: $color-green;
   }
+
+  @include media-breakpoint-from(xl) {
+    @include padding-ver(20px);
+
+    &:hover {
+      text-transform: uppercase;
+      color: $color-green;
+    }
+  }
 }

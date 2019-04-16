@@ -3,9 +3,7 @@
   @include padding-hor(20px);
   max-width: $page-min-width;
 
-  // @each $breakpoint-name, $breakpoint in $breakpoints {
-  //   @include media-breakpoint-from($breakpoint-name) {
-  //     max-width: $breakpoint - 32px;
-  //   }
-  // }
+  @include media-breakpoint-from(xl) {
+    max-width: get-breakpoint(xl) - 40px;
+  }
 }
