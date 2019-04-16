@@ -1,7 +1,7 @@
 mixin contacts-line()
   .contacts-line
     mixin contacts-line__nest(modifier)
-      +nest(parent='contacts-line', modifier=modifier)
+      +nest()(parent='contacts-line', modifier=modifier)
         block
     +contacts-line__nest('tel')
       +tel()

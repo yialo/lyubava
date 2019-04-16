@@ -2,7 +2,7 @@
   .s-container.body-footer__container
     .body-footer__grid
       mixin body-footer__nest(modifier)
-        +nest(parent='body-footer', modifier=modifier)
+        +nest()(parent='body-footer', modifier=modifier)
           block
       +body-footer__nest('listing')
         include _body-footer__items.pug

@@ -1,9 +1,14 @@
 mixin shops()
+  mixin shops__nest(modifier)
+    +nest()(parent='shops', modifier=modifier)
+      block
+
   .shops
-    .s-container.shops__container
-      h2.shops__heading Наши магазины
+    .shops__container
+      h2.s-heading-1.shops__heading Наши магазины
       .shops__content
-        div(class=setModifiers('shops__nest', ['map']))
-          .map(id='map')
-        div(class=setModifiers('shops__nest', ['select']))
-          include ../shops-select/_shops-select.pug
+        +shops__nest('map')
+          .map
+            .map__content(id='map')
+        +shops__nest('select')
+          +shops-select()

@@ -14,3 +14,6 @@ $(document).ready(function () {
 
   $('.promo__list').slick(slickSettings);
 });
+
+
+// TODO: append dots

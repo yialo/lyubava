@@ -1,0 +1,18 @@
+mixin shop-card()
+  .shop-card
+    .shop-card__text
+      p.shop-card__caption МО, Бутово : ЖК Бутово Парк, к 22
+      p.shop-card__details
+        -
+          const _STRINGS =  [
+            'Супермаркет',
+            'Новочеркасск',
+            'Открыто: 09:00 - 23:00',
+          ];
+        each string in _STRINGS
+          span.shop-card__string= string
+    picture.shop-card__picture
+      img.shop-card__image(
+        src='img/shop-card__image.jpg',
+        alt='Магазин',
+      )
