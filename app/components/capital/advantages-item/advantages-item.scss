@@ -9,4 +9,8 @@
       background-size: auto 67px;
     }
   }
+
+  @include media-breakpoint-from(xl) {
+    display: flex;
+  }
 }

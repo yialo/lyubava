@@ -38,12 +38,20 @@
     &--hoister {
       position: fixed;
       z-index: 2;
-      right: 20px;
+      right: 15px;
       display: block;
     }
 
     &--promo {
       margin-bottom: 56px;
+    }
+
+    &--about {
+      margin-bottom: 80px;
+    }
+
+    &--advantages {
+      margin-bottom: 75px;
     }
   }
 }

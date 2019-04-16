@@ -1,3 +1,10 @@
 .#{$this}__item {
-  @include padding-ver($_gutter);
+  @include padding-ver($_gutter-ver);
+
+  @include media-breakpoint-from(xl) {
+    @include padding-ver(0);
+    @include padding-hor($_gutter-hor);
+    display: flex;
+    width: 25%;
+  }
 }

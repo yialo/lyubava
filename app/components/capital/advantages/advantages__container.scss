@@ -1,6 +1,7 @@
 .#{$this}__container {
   @include padding-ver(32px);
-  background-image: url("../img/#{$this}__container@576.png");
-  background-position: -5px;
-  background-repeat: no-repeat;
+
+  @include media-breakpoint-from(xl) {
+    padding-right: 100px;
+  }
 }
