@@ -2,11 +2,10 @@ mixin promo()
   .promo
     .promo__container
       .promo__slider
-        .promo__wrapper
-          .promo__list
-            - for (i = 1; i <= 5; i += 1)
-              div(class=setModifiers('promo__item', [i]))
-                +promo-slide()
+        .promo__list
+          - for (i = 1; i <= 5; i += 1)
+            div(class=setModifiers('promo__item', [i]))
+              +promo-slide()
       .promo__controller
         ul.s-list.promo__controls
           - for (i = 1; i <= 5; i += 1)
