@@ -3,4 +3,10 @@
     @include padding-hor(var(--g_footer-hor-shift));
     margin-bottom: 68px;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--auxiliary {
+      margin-bottom: 130px;
+    }
+  }
 }

@@ -4,4 +4,19 @@
   background-position: calc(50% - 160px) 100%;
   background-size: auto 118px;
   background-repeat: no-repeat;
+
+  @include media-breakpoint-from(xl) {
+    background-image:
+      url("../img/#{$this}__container-Background-1.svg"),
+      url("../img/#{$this}__container-Background-2.svg");
+    background-position:
+      calc(50% + 200px) 100%,
+      0 0;
+    background-size:
+      auto 154px,
+      auto 23px;
+    background-repeat:
+      no-repeat,
+      no-repeat;
+  }
 }

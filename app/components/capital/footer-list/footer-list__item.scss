@@ -1,8 +1,12 @@
 .#{$this}__item {
-  @include padding-ver($_gutter);
+  @include padding-ver(4px);
   padding-left: 11px;
   font-size: 14px;
   letter-spacing: 0.04em;
   color: black;
   border-left: 1px solid $color-green;
+
+  @include media-breakpoint-from(xl) {
+    @include padding-ver(6px);
+  }
 }

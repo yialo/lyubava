@@ -1,4 +1,4 @@
-.#{$this}__items {
+.#{$this}__grid {
   @include media-breakpoint-from(xl) {
     display: flex;
   }

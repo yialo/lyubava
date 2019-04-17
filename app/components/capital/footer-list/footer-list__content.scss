@@ -10,4 +10,9 @@
   .#{$js-hook} & {
     display: block;
   }
+
+  @include media-breakpoint-from(xl) {
+    display: block;
+    border-bottom-style: none;
+  }
 }

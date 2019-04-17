@@ -1,17 +1,8 @@
 .#{$this}__container {
   padding-bottom: 16px;
 
-  // @include media-breakpoint-from(lg) {
-  //   background-image:
-  //     url("../img/#{$this}__container-Background-1.svg"),
-  //     url("../img/#{$this}__container-Background-2.svg");
-  //   background-position:
-  //     calc(100% - 81px) 100%,
-  //     0 0;
-  //   background-size:
-  //     1109px 154px,
-  //     954px 23px;
-  //   background-repeat:
-  //     no-repeat,
-  //     no-repeat;
+  @include media-breakpoint-from(xl) {
+    padding-bottom: 0;
+    padding-right: 100px;
+  }
 }

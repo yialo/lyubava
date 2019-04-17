@@ -4,4 +4,8 @@
   font-size: 24px;
   letter-spacing: 0.04em;
   color: black;
+
+  @include media-breakpoint-from(xl) {
+    font-weight: 900;
+  }
 }

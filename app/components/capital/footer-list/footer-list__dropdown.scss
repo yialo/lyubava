@@ -10,4 +10,18 @@
   .#{$js-hook} & {
     background-image: url("../img/Dropdown-arrow_Up.svg");
   }
+
+  @include media-breakpoint-from(xl) {
+    padding: 0;
+    background-image: none;
+    border-bottom-style: none;
+
+    .#{$js-hook} & {
+      background-image: none;
+    }
+
+    .#{$this}--navigation & {
+      pointer-events: none;
+    }
+  }
 }
