@@ -2,3 +2,7 @@ extends ../base/_template_html--Inner.pug
 
 block page-id
   - const $pageId = 'recipes';
+
+block body-main__Content--inner
+  +nest()(parent='body-main', modifier='recipes')
+    +recipes()
