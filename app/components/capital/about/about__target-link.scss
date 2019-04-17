@@ -1,3 +1,8 @@
 .#{$this}__target-link {
   @include padding-hor(12px);
+
+  @include media-breakpoint-from(xl) {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

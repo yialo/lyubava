@@ -10,4 +10,23 @@
   &--target-link {
     order: 1;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--headline {
+      margin-bottom: 0;
+      margin-right: auto;
+    }
+
+    &--content {
+      margin-top: 40px;
+      margin-bottom: 0;
+    }
+
+    &--target-link {
+      order: 0;
+      align-self: center;
+    }
+  }
 }
+
+// TODO: у этого блока много общего с catalog

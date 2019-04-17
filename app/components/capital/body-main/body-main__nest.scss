@@ -38,6 +38,7 @@
     &--hoister {
       position: fixed;
       z-index: 2;
+      bottom: 15px;
       right: 15px;
       display: block;
     }
@@ -52,6 +53,12 @@
 
     &--advantages {
       margin-bottom: 75px;
+    }
+
+    &--catalog {
+      .#{$this}--index & {
+        margin-bottom: 78px;
+      }
     }
   }
 }

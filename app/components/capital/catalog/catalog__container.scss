@@ -1,4 +1,10 @@
 .#{$this}__container {
   display: flex;
   flex-direction: column;
+
+  @include media-breakpoint-from(xl) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 100px;
+  }
 }

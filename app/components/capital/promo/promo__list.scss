@@ -1,0 +1,9 @@
+.#{$this}__list {
+  display: flex;
+  visibility: hidden;
+
+  &.slick-initialized {
+    display: block;
+    visibility: visible;
+  }
+}
