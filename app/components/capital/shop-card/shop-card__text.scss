@@ -1,3 +1,7 @@
 .#{$this}__text {
   width: 180px;
+
+  @include media-breakpoint-from(xl) {
+    width: 240px;
+  }
 }

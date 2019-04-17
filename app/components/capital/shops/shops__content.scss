@@ -1,4 +1,8 @@
 .#{$this}__content {
   display: flex;
   flex-direction: column;
+
+  @include media-breakpoint-from(xl) {
+    flex-flow: row wrap;
+  }
 }

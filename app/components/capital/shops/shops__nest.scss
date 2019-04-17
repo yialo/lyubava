@@ -2,4 +2,12 @@
   &--map {
     order: 1;
   }
+
+  @include media-breakpoint-from(xl) {
+    &--map {
+      order: 0;
+      flex-grow: 1;
+      display: flex;
+    }
+  }
 }
