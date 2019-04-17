@@ -1,0 +1,5 @@
+.#{$this} {
+  @include media-breakpoint-from(xl) {
+    @include size(100%);
+  }
+}

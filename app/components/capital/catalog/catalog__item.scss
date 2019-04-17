@@ -1,3 +1,31 @@
 .#{$this}__item {
-  @include padding-ver($_gutter);
+  @include padding-ver($_gutter-ver);
+
+  @include media-breakpoint-from(xl) {
+    @include padding-ver(0);
+
+    &--1 {
+      grid-area: meat;
+    }
+
+    &--2 {
+      grid-area: ready-meal;
+    }
+
+    &--3 {
+      grid-area: greenery;
+    }
+
+    &--4 {
+      grid-area: confectionery;
+    }
+
+    &--5 {
+      grid-area: grocery;
+    }
+
+    &--6 {
+      grid-area: dairy;
+    }
+  }
 }

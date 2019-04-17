@@ -1,9 +1,8 @@
 .#{$this}__image {
   object-fit: cover;
-  object-position: 50% 50%;
-  transition: transform 0.3s ease;
+  // transition: transform 0.3s ease-in-out;
 
-  .#{$this}__link:hover & {
-    transform: scale(1.05);
-  }
+  // .#{$this}__link:hover & {
+  //   transform: scale(1.025);
+  // }
 }

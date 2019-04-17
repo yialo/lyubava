@@ -1,10 +1,9 @@
 .#{$this}__image {
   @include size(100%);
   object-fit: cover;
-  object-position: 50% 50%;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out;
 
   .#{$this}__link:hover & {
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
 }

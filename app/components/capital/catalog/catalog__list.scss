@@ -1,3 +1,14 @@
 .#{$this}__list {
-  @include margin-ver(-$_gutter);
+  @include margin-ver(-$_gutter-ver);
+
+  @include media-breakpoint-from(xl) {
+    @include margin-ver(0);
+    display: grid;
+    grid-template:
+      "meat meat ready-meal greenery" 250px
+      "meat meat dairy dairy" 120px
+      "confectionery grocery dairy dairy" 250px
+      / 230px 260px 230px 260px;
+    grid-gap: 20px;
+  }
 }

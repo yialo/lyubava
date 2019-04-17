@@ -2,4 +2,8 @@
   @include size(320px, 269px);
   @include margin-hor(auto);
   overflow: hidden;
+
+  @include media-breakpoint-from(xl) {
+    @include size(100%, auto);
+  }
 }
