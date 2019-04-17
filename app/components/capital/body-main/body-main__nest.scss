@@ -21,17 +21,17 @@
     }
   }
 
+  &--recipes {
+    .#{$this}--index & {
+      margin-bottom: 54px;
+    }
+  }
+
   &--multicolumn {
     @include margin-hor(auto);
     @include padding-hor(20px);
     max-width: $page-min-width;
     margin-bottom: 58px;
-  }
-
-  &--recipes {
-    .#{$this}--index & {
-      margin-bottom: 54px;
-    }
   }
 
   @include media-breakpoint-from(xl) {
@@ -59,6 +59,13 @@
       .#{$this}--index & {
         margin-bottom: 78px;
       }
+    }
+
+    &--multicolumn {
+      display: flex;
+      max-width: get-breakpoint(xl) - 40px;
+      margin-bottom: 70px;
+      padding-right: 100px;
     }
   }
 }
